@@ -1,0 +1,1582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DeliverXModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Firma_Ubezpieczeniowa">
+          <Key>
+            <PropertyRef Name="id_Firma_Ubezpieczeniowa" />
+          </Key>
+          <Property Name="id_Firma_Ubezpieczeniowa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="NIP" Type="nchar" MaxLength="13" Nullable="false" />
+          <Property Name="Państwo" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Miasto" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Kod_pocztowy" Type="nchar" MaxLength="6" Nullable="false" />
+          <Property Name="Ulica" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Nr_budynku" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nr_telefonu" Type="nchar" MaxLength="13" Nullable="false" />
+          <Property Name="Adres_e-mail" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Historia">
+          <Key>
+            <PropertyRef Name="id_Historia" />
+          </Key>
+          <Property Name="id_Historia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Przesyłka" Type="int" Nullable="false" />
+          <Property Name="id_Status" Type="int" Nullable="false" />
+          <Property Name="Data_zmiany_statusu" Type="smalldatetime" Nullable="false" />
+          <Property Name="Opis" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Klient">
+          <Key>
+            <PropertyRef Name="id_Klient" />
+          </Key>
+          <Property Name="id_Klient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Imię" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Nazwisko" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Państwo" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Miasto" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Kod_pocztowy" Type="nchar" MaxLength="6" Nullable="false" />
+          <Property Name="Ulica" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Nr_domu/mieszkania" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nr_telefonu" Type="nchar" MaxLength="13" Nullable="false" />
+          <Property Name="Adres_e-mail" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Kurs">
+          <Key>
+            <PropertyRef Name="id_Kurs" />
+          </Key>
+          <Property Name="id_Kurs" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Pracownik" Type="int" Nullable="false" />
+          <Property Name="id_Pojazd" Type="int" Nullable="false" />
+          <Property Name="Data" Type="smalldatetime" Nullable="false" />
+          <Property Name="Liczba_kilometrów" Type="float" Nullable="false" />
+          <Property Name="Uwagi" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Pojazd">
+          <Key>
+            <PropertyRef Name="id_Pojazd" />
+          </Key>
+          <Property Name="id_Pojazd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Marka" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Model" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Nr_rejestracyjny" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="id_Typ_Pojazdu" Type="int" Nullable="false" />
+          <Property Name="Max_ładowność" Type="float" Nullable="false" />
+          <Property Name="Jednostka_ładowności" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="Rocznik" Type="date" Nullable="false" />
+          <Property Name="Stan_licznika" Type="float" Nullable="false" />
+          <Property Name="Jednostka_licznika" Type="nchar" MaxLength="8" Nullable="false" />
+          <Property Name="Stan_licznika_na_dzień" Type="date" Nullable="false" />
+          <Property Name="Rodzaj_paliwa" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pracownik">
+          <Key>
+            <PropertyRef Name="id_Pracownik" />
+          </Key>
+          <Property Name="id_Pracownik" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Imię" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Nazwisko" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="PESEL" Type="nchar" MaxLength="11" Nullable="false" />
+          <Property Name="Data_urodzenia" Type="date" Nullable="false" />
+          <Property Name="Data_zatrudnienia" Type="date" Nullable="false" />
+          <Property Name="Państwo" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Miasto" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Kod_pocztowy" Type="nchar" MaxLength="6" Nullable="false" />
+          <Property Name="Ulica" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Nr_domu/mieszkania" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Nr_telefonu" Type="nchar" MaxLength="13" Nullable="false" />
+          <Property Name="Adres_e-mail" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Przesyłka">
+          <Key>
+            <PropertyRef Name="id_Przesyłka" />
+          </Key>
+          <Property Name="id_Przesyłka" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Typ_Przesyłki" Type="int" Nullable="false" />
+          <Property Name="id_Doręczenia" Type="int" Nullable="false" />
+          <Property Name="id_Nadawca" Type="int" Nullable="false" />
+          <Property Name="id_Odbiorca" Type="int" Nullable="false" />
+          <Property Name="id_Kurs" Type="int" Nullable="false" />
+          <Property Name="Data_nadania" Type="smalldatetime" Nullable="false" />
+          <Property Name="Data_wymaganego_dostarczenia" Type="smalldatetime" Nullable="false" />
+          <Property Name="Data_rzeczywistego_dostarczenia" Type="smalldatetime" />
+          <Property Name="Waga" Type="float" Nullable="false" />
+          <Property Name="Jednostka_wagi" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="Opłata" Type="smallmoney" Nullable="false" />
+          <Property Name="Waluta" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="Nr_dokumentu_przewozowego" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="id_Typ_Płatności" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="id_Status" />
+          </Key>
+          <Property Name="id_Status" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nazwa" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Typ_Płatności">
+          <Key>
+            <PropertyRef Name="id_Typ_Płatności" />
+          </Key>
+          <Property Name="id_Typ_Płatności" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Typ" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Typ_Pojazdu">
+          <Key>
+            <PropertyRef Name="id_Typ_Pojazdu" />
+          </Key>
+          <Property Name="id_Typ_Pojazdu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Typ" Type="nchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Typ_Przesyłki">
+          <Key>
+            <PropertyRef Name="id_Typ_Przesyłki" />
+          </Key>
+          <Property Name="id_Typ_Przesyłki" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Typ" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Typ_Ubezpieczenia">
+          <Key>
+            <PropertyRef Name="id_Typ_Ubezpieczenia" />
+          </Key>
+          <Property Name="id_Typ_Ubezpieczenia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Typ" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ubezpieczenie">
+          <Key>
+            <PropertyRef Name="id_Ubezpieczenie" />
+          </Key>
+          <Property Name="id_Ubezpieczenie" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Pojazd" Type="int" Nullable="false" />
+          <Property Name="id_Typ_Ubezpieczenia" Type="int" Nullable="false" />
+          <Property Name="id_Firma_Ubezpieczeniowa" Type="int" Nullable="false" />
+          <Property Name="Nr_polisy" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Obowiązuje_od" Type="date" Nullable="false" />
+          <Property Name="Obowiązuje_do" Type="date" Nullable="false" />
+          <Property Name="Cena" Type="smallmoney" Nullable="false" />
+          <Property Name="Waluta" Type="nchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Uprawnienie">
+          <Key>
+            <PropertyRef Name="id_Uprawnienia" />
+          </Key>
+          <Property Name="id_Uprawnienia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Pracownik" Type="int" Nullable="false" />
+          <Property Name="id_Typ_Pojazdu" Type="int" Nullable="false" />
+          <Property Name="Nr_dokumentu" Type="nchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DeliverX.dbo.Historia_widok' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Historia_widok">
+          <Key>
+            <PropertyRef Name="id_Historia" />
+            <PropertyRef Name="id_Przesyłka" />
+            <PropertyRef Name="Nazwa" />
+            <PropertyRef Name="Data_zmiany_statusu" />
+          </Key>
+          <Property Name="id_Historia" Type="int" Nullable="false" />
+          <Property Name="id_Przesyłka" Type="int" Nullable="false" />
+          <Property Name="Nazwa" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Data_zmiany_statusu" Type="smalldatetime" Nullable="false" />
+          <Property Name="Opis" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DeliverX.dbo.Pojazd_widok' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Pojazd_widok">
+          <Key>
+            <PropertyRef Name="id_Pojazd" />
+            <PropertyRef Name="Marka" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Nr_rejestracyjny" />
+            <PropertyRef Name="Typ_pojazdu" />
+            <PropertyRef Name="Max_ładowność" />
+            <PropertyRef Name="Jednostka_ładowności" />
+            <PropertyRef Name="Rocznik" />
+            <PropertyRef Name="Stan_licznika" />
+            <PropertyRef Name="Jednostka_licznika" />
+            <PropertyRef Name="Stan_licznika_na_dzień" />
+            <PropertyRef Name="Rodzaj_paliwa" />
+          </Key>
+          <Property Name="id_Pojazd" Type="int" Nullable="false" />
+          <Property Name="Marka" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Model" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Nr_rejestracyjny" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Typ_pojazdu" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Max_ładowność" Type="float" Nullable="false" />
+          <Property Name="Jednostka_ładowności" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="Rocznik" Type="date" Nullable="false" />
+          <Property Name="Stan_licznika" Type="float" Nullable="false" />
+          <Property Name="Jednostka_licznika" Type="nchar" MaxLength="8" Nullable="false" />
+          <Property Name="Stan_licznika_na_dzień" Type="date" Nullable="false" />
+          <Property Name="Rodzaj_paliwa" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DeliverX.dbo.Przesyłka_widok' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Przesyłka_widok">
+          <Key>
+            <PropertyRef Name="id_Przesyłka" />
+            <PropertyRef Name="Typ_Przesyłki" />
+            <PropertyRef Name="Odbiorca_Imię" />
+            <PropertyRef Name="Odbiorca_Nazwisko" />
+            <PropertyRef Name="Nadawca_Imię" />
+            <PropertyRef Name="Nadawca_Nazwisko" />
+            <PropertyRef Name="Do_miasta" />
+            <PropertyRef Name="Na_ulicę" />
+            <PropertyRef Name="Do_mieszkania" />
+            <PropertyRef Name="Pracownik_Imię" />
+            <PropertyRef Name="Pracownik_Nazwisko" />
+            <PropertyRef Name="Data_nadania" />
+            <PropertyRef Name="Data_wymaganego_dostarczenia" />
+            <PropertyRef Name="Waga" />
+            <PropertyRef Name="Jednostka_wagi" />
+            <PropertyRef Name="Opłata" />
+            <PropertyRef Name="Waluta" />
+            <PropertyRef Name="Nr_dokumentu_przewozowego" />
+            <PropertyRef Name="Typ_płatności" />
+          </Key>
+          <Property Name="id_Przesyłka" Type="int" Nullable="false" />
+          <Property Name="Typ_Przesyłki" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Odbiorca_Imię" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Odbiorca_Nazwisko" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Nadawca_Imię" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Nadawca_Nazwisko" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Do_miasta" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Na_ulicę" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Do_mieszkania" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Pracownik_Imię" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Pracownik_Nazwisko" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Data_nadania" Type="smalldatetime" Nullable="false" />
+          <Property Name="Data_wymaganego_dostarczenia" Type="smalldatetime" Nullable="false" />
+          <Property Name="Data_rzeczywistego_dostarczenia" Type="smalldatetime" />
+          <Property Name="Waga" Type="float" Nullable="false" />
+          <Property Name="Jednostka_wagi" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="Opłata" Type="smallmoney" Nullable="false" />
+          <Property Name="Waluta" Type="nchar" MaxLength="5" Nullable="false" />
+          <Property Name="Nr_dokumentu_przewozowego" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Typ_płatności" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DeliverX.dbo.Ubezpieczenie_widok' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Ubezpieczenie_widok">
+          <Key>
+            <PropertyRef Name="id_Ubezpieczenie" />
+            <PropertyRef Name="Marka" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Typ_pojazdu" />
+            <PropertyRef Name="Nr_rejestracyjny" />
+            <PropertyRef Name="Typ_Ubezpieczenia" />
+            <PropertyRef Name="Firma" />
+            <PropertyRef Name="Nr_polisy" />
+            <PropertyRef Name="Obowiązuje_od" />
+            <PropertyRef Name="Obowiązuje_do" />
+            <PropertyRef Name="Cena" />
+            <PropertyRef Name="Waluta" />
+          </Key>
+          <Property Name="id_Ubezpieczenie" Type="int" Nullable="false" />
+          <Property Name="Marka" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Model" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Typ_pojazdu" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Nr_rejestracyjny" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Typ_Ubezpieczenia" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Firma" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Nr_polisy" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Obowiązuje_od" Type="date" Nullable="false" />
+          <Property Name="Obowiązuje_do" Type="date" Nullable="false" />
+          <Property Name="Cena" Type="smallmoney" Nullable="false" />
+          <Property Name="Waluta" Type="nchar" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DeliverX.dbo.Uprawnienie_widok' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Uprawnienie_widok">
+          <Key>
+            <PropertyRef Name="id_Uprawnienia" />
+            <PropertyRef Name="Imię" />
+            <PropertyRef Name="Nazwisko" />
+            <PropertyRef Name="Typ_pojazdu" />
+            <PropertyRef Name="Nr_dokumentu" />
+          </Key>
+          <Property Name="id_Uprawnienia" Type="int" Nullable="false" />
+          <Property Name="Imię" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Nazwisko" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Typ_pojazdu" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="Nr_dokumentu" Type="nchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Historia_Przesyłka">
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="1" />
+          <End Role="Historia" Type="Self.Historia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Przesyłka">
+              <PropertyRef Name="id_Przesyłka" />
+            </Principal>
+            <Dependent Role="Historia">
+              <PropertyRef Name="id_Przesyłka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Historia_Status">
+          <End Role="Status" Type="Self.Status" Multiplicity="1" />
+          <End Role="Historia" Type="Self.Historia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="id_Status" />
+            </Principal>
+            <Dependent Role="Historia">
+              <PropertyRef Name="id_Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kurs_Pojazd">
+          <End Role="Pojazd" Type="Self.Pojazd" Multiplicity="1" />
+          <End Role="Kurs" Type="Self.Kurs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pojazd">
+              <PropertyRef Name="id_Pojazd" />
+            </Principal>
+            <Dependent Role="Kurs">
+              <PropertyRef Name="id_Pojazd" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kurs_Pracownik">
+          <End Role="Pracownik" Type="Self.Pracownik" Multiplicity="1" />
+          <End Role="Kurs" Type="Self.Kurs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pracownik">
+              <PropertyRef Name="id_Pracownik" />
+            </Principal>
+            <Dependent Role="Kurs">
+              <PropertyRef Name="id_Pracownik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pojazd_Typ_Pojazdu">
+          <End Role="Typ_Pojazdu" Type="Self.Typ_Pojazdu" Multiplicity="1" />
+          <End Role="Pojazd" Type="Self.Pojazd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Typ_Pojazdu">
+              <PropertyRef Name="id_Typ_Pojazdu" />
+            </Principal>
+            <Dependent Role="Pojazd">
+              <PropertyRef Name="id_Typ_Pojazdu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Klient">
+          <End Role="Klient" Type="Self.Klient" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Klient">
+              <PropertyRef Name="id_Klient" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Doręczenia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Klient1">
+          <End Role="Klient" Type="Self.Klient" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Klient">
+              <PropertyRef Name="id_Klient" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Nadawca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Klient2">
+          <End Role="Klient" Type="Self.Klient" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Klient">
+              <PropertyRef Name="id_Klient" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Odbiorca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Kurs">
+          <End Role="Kurs" Type="Self.Kurs" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kurs">
+              <PropertyRef Name="id_Kurs" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Kurs" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Typ_Płatności">
+          <End Role="Typ_Płatności" Type="Self.Typ_Płatności" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Typ_Płatności">
+              <PropertyRef Name="id_Typ_Płatności" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Typ_Płatności" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Typ_Przesyłki">
+          <End Role="Typ_Przesyłki" Type="Self.Typ_Przesyłki" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Typ_Przesyłki">
+              <PropertyRef Name="id_Typ_Przesyłki" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Typ_Przesyłki" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ubezpieczenie_Firma_Ubezpieczeniowa">
+          <End Role="Firma_Ubezpieczeniowa" Type="Self.Firma_Ubezpieczeniowa" Multiplicity="1" />
+          <End Role="Ubezpieczenie" Type="Self.Ubezpieczenie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firma_Ubezpieczeniowa">
+              <PropertyRef Name="id_Firma_Ubezpieczeniowa" />
+            </Principal>
+            <Dependent Role="Ubezpieczenie">
+              <PropertyRef Name="id_Firma_Ubezpieczeniowa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ubezpieczenie_Pojazd">
+          <End Role="Pojazd" Type="Self.Pojazd" Multiplicity="1" />
+          <End Role="Ubezpieczenie" Type="Self.Ubezpieczenie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pojazd">
+              <PropertyRef Name="id_Pojazd" />
+            </Principal>
+            <Dependent Role="Ubezpieczenie">
+              <PropertyRef Name="id_Pojazd" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ubezpieczenie_Typ_Ubezpieczenia">
+          <End Role="Typ_Ubezpieczenia" Type="Self.Typ_Ubezpieczenia" Multiplicity="1" />
+          <End Role="Ubezpieczenie" Type="Self.Ubezpieczenie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Typ_Ubezpieczenia">
+              <PropertyRef Name="id_Typ_Ubezpieczenia" />
+            </Principal>
+            <Dependent Role="Ubezpieczenie">
+              <PropertyRef Name="id_Typ_Ubezpieczenia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Uprawnienie_Pracownik">
+          <End Role="Pracownik" Type="Self.Pracownik" Multiplicity="1" />
+          <End Role="Uprawnienie" Type="Self.Uprawnienie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pracownik">
+              <PropertyRef Name="id_Pracownik" />
+            </Principal>
+            <Dependent Role="Uprawnienie">
+              <PropertyRef Name="id_Pracownik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Uprawnienie_Typ_Pojazdu">
+          <End Role="Typ_Pojazdu" Type="Self.Typ_Pojazdu" Multiplicity="1" />
+          <End Role="Uprawnienie" Type="Self.Uprawnienie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Typ_Pojazdu">
+              <PropertyRef Name="id_Typ_Pojazdu" />
+            </Principal>
+            <Dependent Role="Uprawnienie">
+              <PropertyRef Name="id_Typ_Pojazdu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DeliverXModelStoreContainer">
+          <EntitySet Name="Firma_Ubezpieczeniowa" EntityType="Self.Firma_Ubezpieczeniowa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Historia" EntityType="Self.Historia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Klient" EntityType="Self.Klient" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kurs" EntityType="Self.Kurs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pojazd" EntityType="Self.Pojazd" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pracownik" EntityType="Self.Pracownik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Przesyłka" EntityType="Self.Przesyłka" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Typ_Płatności" EntityType="Self.Typ_Płatności" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Typ_Pojazdu" EntityType="Self.Typ_Pojazdu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Typ_Przesyłki" EntityType="Self.Typ_Przesyłki" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Typ_Ubezpieczenia" EntityType="Self.Typ_Ubezpieczenia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ubezpieczenie" EntityType="Self.Ubezpieczenie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Uprawnienie" EntityType="Self.Uprawnienie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Historia_widok" EntityType="Self.Historia_widok" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Historia_widok].[id_Historia] AS [id_Historia], 
+    [Historia_widok].[id_Przesyłka] AS [id_Przesyłka], 
+    [Historia_widok].[Nazwa] AS [Nazwa], 
+    [Historia_widok].[Data_zmiany_statusu] AS [Data_zmiany_statusu], 
+    [Historia_widok].[Opis] AS [Opis]
+    FROM [dbo].[Historia_widok] AS [Historia_widok]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Pojazd_widok" EntityType="Self.Pojazd_widok" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Pojazd_widok].[id_Pojazd] AS [id_Pojazd], 
+    [Pojazd_widok].[Marka] AS [Marka], 
+    [Pojazd_widok].[Model] AS [Model], 
+    [Pojazd_widok].[Nr_rejestracyjny] AS [Nr_rejestracyjny], 
+    [Pojazd_widok].[Typ_pojazdu] AS [Typ_pojazdu], 
+    [Pojazd_widok].[Max_ładowność] AS [Max_ładowność], 
+    [Pojazd_widok].[Jednostka_ładowności] AS [Jednostka_ładowności], 
+    [Pojazd_widok].[Rocznik] AS [Rocznik], 
+    [Pojazd_widok].[Stan_licznika] AS [Stan_licznika], 
+    [Pojazd_widok].[Jednostka_licznika] AS [Jednostka_licznika], 
+    [Pojazd_widok].[Stan_licznika_na_dzień] AS [Stan_licznika_na_dzień], 
+    [Pojazd_widok].[Rodzaj_paliwa] AS [Rodzaj_paliwa]
+    FROM [dbo].[Pojazd_widok] AS [Pojazd_widok]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Przesyłka_widok" EntityType="Self.Przesyłka_widok" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Przesyłka_widok].[id_Przesyłka] AS [id_Przesyłka], 
+    [Przesyłka_widok].[Typ_Przesyłki] AS [Typ_Przesyłki], 
+    [Przesyłka_widok].[Odbiorca_Imię] AS [Odbiorca_Imię], 
+    [Przesyłka_widok].[Odbiorca_Nazwisko] AS [Odbiorca_Nazwisko], 
+    [Przesyłka_widok].[Nadawca_Imię] AS [Nadawca_Imię], 
+    [Przesyłka_widok].[Nadawca_Nazwisko] AS [Nadawca_Nazwisko], 
+    [Przesyłka_widok].[Do_miasta] AS [Do_miasta], 
+    [Przesyłka_widok].[Na_ulicę] AS [Na_ulicę], 
+    [Przesyłka_widok].[Do_mieszkania] AS [Do_mieszkania], 
+    [Przesyłka_widok].[Pracownik_Imię] AS [Pracownik_Imię], 
+    [Przesyłka_widok].[Pracownik_Nazwisko] AS [Pracownik_Nazwisko], 
+    [Przesyłka_widok].[Data_nadania] AS [Data_nadania], 
+    [Przesyłka_widok].[Data_wymaganego_dostarczenia] AS [Data_wymaganego_dostarczenia], 
+    [Przesyłka_widok].[Data_rzeczywistego_dostarczenia] AS [Data_rzeczywistego_dostarczenia], 
+    [Przesyłka_widok].[Waga] AS [Waga], 
+    [Przesyłka_widok].[Jednostka_wagi] AS [Jednostka_wagi], 
+    [Przesyłka_widok].[Opłata] AS [Opłata], 
+    [Przesyłka_widok].[Waluta] AS [Waluta], 
+    [Przesyłka_widok].[Nr_dokumentu_przewozowego] AS [Nr_dokumentu_przewozowego], 
+    [Przesyłka_widok].[Typ_płatności] AS [Typ_płatności]
+    FROM [dbo].[Przesyłka_widok] AS [Przesyłka_widok]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Ubezpieczenie_widok" EntityType="Self.Ubezpieczenie_widok" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Ubezpieczenie_widok].[id_Ubezpieczenie] AS [id_Ubezpieczenie], 
+    [Ubezpieczenie_widok].[Marka] AS [Marka], 
+    [Ubezpieczenie_widok].[Model] AS [Model], 
+    [Ubezpieczenie_widok].[Typ_pojazdu] AS [Typ_pojazdu], 
+    [Ubezpieczenie_widok].[Nr_rejestracyjny] AS [Nr_rejestracyjny], 
+    [Ubezpieczenie_widok].[Typ_Ubezpieczenia] AS [Typ_Ubezpieczenia], 
+    [Ubezpieczenie_widok].[Firma] AS [Firma], 
+    [Ubezpieczenie_widok].[Nr_polisy] AS [Nr_polisy], 
+    [Ubezpieczenie_widok].[Obowiązuje_od] AS [Obowiązuje_od], 
+    [Ubezpieczenie_widok].[Obowiązuje_do] AS [Obowiązuje_do], 
+    [Ubezpieczenie_widok].[Cena] AS [Cena], 
+    [Ubezpieczenie_widok].[Waluta] AS [Waluta]
+    FROM [dbo].[Ubezpieczenie_widok] AS [Ubezpieczenie_widok]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Uprawnienie_widok" EntityType="Self.Uprawnienie_widok" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Uprawnienie_widok].[id_Uprawnienia] AS [id_Uprawnienia], 
+    [Uprawnienie_widok].[Imię] AS [Imię], 
+    [Uprawnienie_widok].[Nazwisko] AS [Nazwisko], 
+    [Uprawnienie_widok].[Typ_pojazdu] AS [Typ_pojazdu], 
+    [Uprawnienie_widok].[Nr_dokumentu] AS [Nr_dokumentu]
+    FROM [dbo].[Uprawnienie_widok] AS [Uprawnienie_widok]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Historia_Przesyłka" Association="Self.FK_Historia_Przesyłka">
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+            <End Role="Historia" EntitySet="Historia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Historia_Status" Association="Self.FK_Historia_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Historia" EntitySet="Historia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kurs_Pojazd" Association="Self.FK_Kurs_Pojazd">
+            <End Role="Pojazd" EntitySet="Pojazd" />
+            <End Role="Kurs" EntitySet="Kurs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kurs_Pracownik" Association="Self.FK_Kurs_Pracownik">
+            <End Role="Pracownik" EntitySet="Pracownik" />
+            <End Role="Kurs" EntitySet="Kurs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pojazd_Typ_Pojazdu" Association="Self.FK_Pojazd_Typ_Pojazdu">
+            <End Role="Typ_Pojazdu" EntitySet="Typ_Pojazdu" />
+            <End Role="Pojazd" EntitySet="Pojazd" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Klient" Association="Self.FK_Przesyłka_Klient">
+            <End Role="Klient" EntitySet="Klient" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Klient1" Association="Self.FK_Przesyłka_Klient1">
+            <End Role="Klient" EntitySet="Klient" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Klient2" Association="Self.FK_Przesyłka_Klient2">
+            <End Role="Klient" EntitySet="Klient" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Kurs" Association="Self.FK_Przesyłka_Kurs">
+            <End Role="Kurs" EntitySet="Kurs" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Typ_Płatności" Association="Self.FK_Przesyłka_Typ_Płatności">
+            <End Role="Typ_Płatności" EntitySet="Typ_Płatności" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Typ_Przesyłki" Association="Self.FK_Przesyłka_Typ_Przesyłki">
+            <End Role="Typ_Przesyłki" EntitySet="Typ_Przesyłki" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ubezpieczenie_Firma_Ubezpieczeniowa" Association="Self.FK_Ubezpieczenie_Firma_Ubezpieczeniowa">
+            <End Role="Firma_Ubezpieczeniowa" EntitySet="Firma_Ubezpieczeniowa" />
+            <End Role="Ubezpieczenie" EntitySet="Ubezpieczenie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ubezpieczenie_Pojazd" Association="Self.FK_Ubezpieczenie_Pojazd">
+            <End Role="Pojazd" EntitySet="Pojazd" />
+            <End Role="Ubezpieczenie" EntitySet="Ubezpieczenie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ubezpieczenie_Typ_Ubezpieczenia" Association="Self.FK_Ubezpieczenie_Typ_Ubezpieczenia">
+            <End Role="Typ_Ubezpieczenia" EntitySet="Typ_Ubezpieczenia" />
+            <End Role="Ubezpieczenie" EntitySet="Ubezpieczenie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Uprawnienie_Pracownik" Association="Self.FK_Uprawnienie_Pracownik">
+            <End Role="Pracownik" EntitySet="Pracownik" />
+            <End Role="Uprawnienie" EntitySet="Uprawnienie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Uprawnienie_Typ_Pojazdu" Association="Self.FK_Uprawnienie_Typ_Pojazdu">
+            <End Role="Typ_Pojazdu" EntitySet="Typ_Pojazdu" />
+            <End Role="Uprawnienie" EntitySet="Uprawnienie" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DeliverXModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Firma_Ubezpieczeniowa">
+          <Key>
+            <PropertyRef Name="id_Firma_Ubezpieczeniowa" />
+          </Key>
+          <Property Name="id_Firma_Ubezpieczeniowa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="NIP" Type="String" MaxLength="13" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Państwo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Kod_pocztowy" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Ulica" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_budynku" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_telefonu" Type="String" MaxLength="13" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Adres_e_mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Ubezpieczenie" Relationship="Self.FK_Ubezpieczenie_Firma_Ubezpieczeniowa" FromRole="Firma_Ubezpieczeniowa" ToRole="Ubezpieczenie" />
+        </EntityType>
+        <EntityType Name="Historia">
+          <Key>
+            <PropertyRef Name="id_Historia" />
+          </Key>
+          <Property Name="id_Historia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Przesyłka" Type="Int32" Nullable="false" />
+          <Property Name="id_Status" Type="Int32" Nullable="false" />
+          <Property Name="Data_zmiany_statusu" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Opis" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Przesyłka" Relationship="Self.FK_Historia_Przesyłka" FromRole="Historia" ToRole="Przesyłka" />
+          <NavigationProperty Name="Status" Relationship="Self.FK_Historia_Status" FromRole="Historia" ToRole="Status" />
+        </EntityType>
+        <EntityType Name="Klient">
+          <Key>
+            <PropertyRef Name="id_Klient" />
+          </Key>
+          <Property Name="id_Klient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Imię" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nazwisko" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Państwo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Kod_pocztowy" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Ulica" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_domu_mieszkania" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_telefonu" Type="String" MaxLength="13" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Adres_e_mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Przesyłka" Relationship="Self.FK_Przesyłka_Klient" FromRole="Klient" ToRole="Przesyłka" />
+          <NavigationProperty Name="Przesyłka1" Relationship="Self.FK_Przesyłka_Klient1" FromRole="Klient" ToRole="Przesyłka" />
+          <NavigationProperty Name="Przesyłka2" Relationship="Self.FK_Przesyłka_Klient2" FromRole="Klient" ToRole="Przesyłka" />
+        </EntityType>
+        <EntityType Name="Kurs">
+          <Key>
+            <PropertyRef Name="id_Kurs" />
+          </Key>
+          <Property Name="id_Kurs" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Pracownik" Type="Int32" Nullable="false" />
+          <Property Name="id_Pojazd" Type="Int32" Nullable="false" />
+          <Property Name="Data" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Liczba_kilometrów" Type="Double" Nullable="false" />
+          <Property Name="Uwagi" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Pojazd" Relationship="Self.FK_Kurs_Pojazd" FromRole="Kurs" ToRole="Pojazd" />
+          <NavigationProperty Name="Pracownik" Relationship="Self.FK_Kurs_Pracownik" FromRole="Kurs" ToRole="Pracownik" />
+          <NavigationProperty Name="Przesyłka" Relationship="Self.FK_Przesyłka_Kurs" FromRole="Kurs" ToRole="Przesyłka" />
+        </EntityType>
+        <EntityType Name="Pojazd">
+          <Key>
+            <PropertyRef Name="id_Pojazd" />
+          </Key>
+          <Property Name="id_Pojazd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Marka" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_rejestracyjny" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="id_Typ_Pojazdu" Type="Int32" Nullable="false" />
+          <Property Name="Max_ładowność" Type="Double" Nullable="false" />
+          <Property Name="Jednostka_ładowności" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Rocznik" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Stan_licznika" Type="Double" Nullable="false" />
+          <Property Name="Jednostka_licznika" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Stan_licznika_na_dzień" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Rodzaj_paliwa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Kurs" Relationship="Self.FK_Kurs_Pojazd" FromRole="Pojazd" ToRole="Kurs" />
+          <NavigationProperty Name="Typ_Pojazdu" Relationship="Self.FK_Pojazd_Typ_Pojazdu" FromRole="Pojazd" ToRole="Typ_Pojazdu" />
+          <NavigationProperty Name="Ubezpieczenie" Relationship="Self.FK_Ubezpieczenie_Pojazd" FromRole="Pojazd" ToRole="Ubezpieczenie" />
+        </EntityType>
+        <EntityType Name="Pracownik">
+          <Key>
+            <PropertyRef Name="id_Pracownik" />
+          </Key>
+          <Property Name="id_Pracownik" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Imię" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nazwisko" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="PESEL" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Data_urodzenia" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Data_zatrudnienia" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Państwo" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Miasto" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Kod_pocztowy" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Ulica" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_domu_mieszkania" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_telefonu" Type="String" MaxLength="13" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Adres_e_mail" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Kurs" Relationship="Self.FK_Kurs_Pracownik" FromRole="Pracownik" ToRole="Kurs" />
+          <NavigationProperty Name="Uprawnienie" Relationship="Self.FK_Uprawnienie_Pracownik" FromRole="Pracownik" ToRole="Uprawnienie" />
+        </EntityType>
+        <EntityType Name="Przesyłka">
+          <Key>
+            <PropertyRef Name="id_Przesyłka" />
+          </Key>
+          <Property Name="id_Przesyłka" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Typ_Przesyłki" Type="Int32" Nullable="false" />
+          <Property Name="id_Doręczenia" Type="Int32" Nullable="false" />
+          <Property Name="id_Nadawca" Type="Int32" Nullable="false" />
+          <Property Name="id_Odbiorca" Type="Int32" Nullable="false" />
+          <Property Name="id_Kurs" Type="Int32" Nullable="false" />
+          <Property Name="Data_nadania" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Data_wymaganego_dostarczenia" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Data_rzeczywistego_dostarczenia" Type="DateTime" Precision="0" />
+          <Property Name="Waga" Type="Double" Nullable="false" />
+          <Property Name="Jednostka_wagi" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Opłata" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="Waluta" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_dokumentu_przewozowego" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="id_Typ_Płatności" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Historia" Relationship="Self.FK_Historia_Przesyłka" FromRole="Przesyłka" ToRole="Historia" />
+          <NavigationProperty Name="Klient" Relationship="Self.FK_Przesyłka_Klient" FromRole="Przesyłka" ToRole="Klient" />
+          <NavigationProperty Name="Klient1" Relationship="Self.FK_Przesyłka_Klient1" FromRole="Przesyłka" ToRole="Klient" />
+          <NavigationProperty Name="Klient2" Relationship="Self.FK_Przesyłka_Klient2" FromRole="Przesyłka" ToRole="Klient" />
+          <NavigationProperty Name="Kurs" Relationship="Self.FK_Przesyłka_Kurs" FromRole="Przesyłka" ToRole="Kurs" />
+          <NavigationProperty Name="Typ_Płatności" Relationship="Self.FK_Przesyłka_Typ_Płatności" FromRole="Przesyłka" ToRole="Typ_Płatności" />
+          <NavigationProperty Name="Typ_Przesyłki" Relationship="Self.FK_Przesyłka_Typ_Przesyłki" FromRole="Przesyłka" ToRole="Typ_Przesyłki" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="id_Status" />
+          </Key>
+          <Property Name="id_Status" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nazwa" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Historia" Relationship="Self.FK_Historia_Status" FromRole="Status" ToRole="Historia" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Typ_Płatności">
+          <Key>
+            <PropertyRef Name="id_Typ_Płatności" />
+          </Key>
+          <Property Name="id_Typ_Płatności" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Typ" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Przesyłka" Relationship="Self.FK_Przesyłka_Typ_Płatności" FromRole="Typ_Płatności" ToRole="Przesyłka" />
+        </EntityType>
+        <EntityType Name="Typ_Pojazdu">
+          <Key>
+            <PropertyRef Name="id_Typ_Pojazdu" />
+          </Key>
+          <Property Name="id_Typ_Pojazdu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Typ" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Pojazd" Relationship="Self.FK_Pojazd_Typ_Pojazdu" FromRole="Typ_Pojazdu" ToRole="Pojazd" />
+          <NavigationProperty Name="Uprawnienie" Relationship="Self.FK_Uprawnienie_Typ_Pojazdu" FromRole="Typ_Pojazdu" ToRole="Uprawnienie" />
+        </EntityType>
+        <EntityType Name="Typ_Przesyłki">
+          <Key>
+            <PropertyRef Name="id_Typ_Przesyłki" />
+          </Key>
+          <Property Name="id_Typ_Przesyłki" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Typ" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Przesyłka" Relationship="Self.FK_Przesyłka_Typ_Przesyłki" FromRole="Typ_Przesyłki" ToRole="Przesyłka" />
+        </EntityType>
+        <EntityType Name="Typ_Ubezpieczenia">
+          <Key>
+            <PropertyRef Name="id_Typ_Ubezpieczenia" />
+          </Key>
+          <Property Name="id_Typ_Ubezpieczenia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Typ" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Ubezpieczenie" Relationship="Self.FK_Ubezpieczenie_Typ_Ubezpieczenia" FromRole="Typ_Ubezpieczenia" ToRole="Ubezpieczenie" />
+        </EntityType>
+        <EntityType Name="Ubezpieczenie">
+          <Key>
+            <PropertyRef Name="id_Ubezpieczenie" />
+          </Key>
+          <Property Name="id_Ubezpieczenie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Pojazd" Type="Int32" Nullable="false" />
+          <Property Name="id_Typ_Ubezpieczenia" Type="Int32" Nullable="false" />
+          <Property Name="id_Firma_Ubezpieczeniowa" Type="Int32" Nullable="false" />
+          <Property Name="Nr_polisy" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Obowiązuje_od" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Obowiązuje_do" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Cena" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="Waluta" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Firma_Ubezpieczeniowa" Relationship="Self.FK_Ubezpieczenie_Firma_Ubezpieczeniowa" FromRole="Ubezpieczenie" ToRole="Firma_Ubezpieczeniowa" />
+          <NavigationProperty Name="Pojazd" Relationship="Self.FK_Ubezpieczenie_Pojazd" FromRole="Ubezpieczenie" ToRole="Pojazd" />
+          <NavigationProperty Name="Typ_Ubezpieczenia" Relationship="Self.FK_Ubezpieczenie_Typ_Ubezpieczenia" FromRole="Ubezpieczenie" ToRole="Typ_Ubezpieczenia" />
+        </EntityType>
+        <EntityType Name="Uprawnienie">
+          <Key>
+            <PropertyRef Name="id_Uprawnienia" />
+          </Key>
+          <Property Name="id_Uprawnienia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Pracownik" Type="Int32" Nullable="false" />
+          <Property Name="id_Typ_Pojazdu" Type="Int32" Nullable="false" />
+          <Property Name="Nr_dokumentu" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Pracownik" Relationship="Self.FK_Uprawnienie_Pracownik" FromRole="Uprawnienie" ToRole="Pracownik" />
+          <NavigationProperty Name="Typ_Pojazdu" Relationship="Self.FK_Uprawnienie_Typ_Pojazdu" FromRole="Uprawnienie" ToRole="Typ_Pojazdu" />
+        </EntityType>
+        <EntityType Name="Historia_widok">
+          <Key>
+            <PropertyRef Name="id_Historia" />
+            <PropertyRef Name="id_Przesyłka" />
+            <PropertyRef Name="Nazwa" />
+            <PropertyRef Name="Data_zmiany_statusu" />
+          </Key>
+          <Property Name="id_Historia" Type="Int32" Nullable="false" />
+          <Property Name="id_Przesyłka" Type="Int32" Nullable="false" />
+          <Property Name="Nazwa" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Data_zmiany_statusu" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Opis" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Pojazd_widok">
+          <Key>
+            <PropertyRef Name="id_Pojazd" />
+            <PropertyRef Name="Marka" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Nr_rejestracyjny" />
+            <PropertyRef Name="Typ_pojazdu" />
+            <PropertyRef Name="Max_ładowność" />
+            <PropertyRef Name="Jednostka_ładowności" />
+            <PropertyRef Name="Rocznik" />
+            <PropertyRef Name="Stan_licznika" />
+            <PropertyRef Name="Jednostka_licznika" />
+            <PropertyRef Name="Stan_licznika_na_dzień" />
+            <PropertyRef Name="Rodzaj_paliwa" />
+          </Key>
+          <Property Name="id_Pojazd" Type="Int32" Nullable="false" />
+          <Property Name="Marka" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_rejestracyjny" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Typ_pojazdu" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Max_ładowność" Type="Double" Nullable="false" />
+          <Property Name="Jednostka_ładowności" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Rocznik" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Stan_licznika" Type="Double" Nullable="false" />
+          <Property Name="Jednostka_licznika" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Stan_licznika_na_dzień" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Rodzaj_paliwa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Przesyłka_widok">
+          <Key>
+            <PropertyRef Name="id_Przesyłka" />
+            <PropertyRef Name="Typ_Przesyłki" />
+            <PropertyRef Name="Odbiorca_Imię" />
+            <PropertyRef Name="Odbiorca_Nazwisko" />
+            <PropertyRef Name="Nadawca_Imię" />
+            <PropertyRef Name="Nadawca_Nazwisko" />
+            <PropertyRef Name="Do_miasta" />
+            <PropertyRef Name="Na_ulicę" />
+            <PropertyRef Name="Do_mieszkania" />
+            <PropertyRef Name="Pracownik_Imię" />
+            <PropertyRef Name="Pracownik_Nazwisko" />
+            <PropertyRef Name="Data_nadania" />
+            <PropertyRef Name="Data_wymaganego_dostarczenia" />
+            <PropertyRef Name="Waga" />
+            <PropertyRef Name="Jednostka_wagi" />
+            <PropertyRef Name="Opłata" />
+            <PropertyRef Name="Waluta" />
+            <PropertyRef Name="Nr_dokumentu_przewozowego" />
+            <PropertyRef Name="Typ_płatności" />
+          </Key>
+          <Property Name="id_Przesyłka" Type="Int32" Nullable="false" />
+          <Property Name="Typ_Przesyłki" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Odbiorca_Imię" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Odbiorca_Nazwisko" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nadawca_Imię" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nadawca_Nazwisko" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Do_miasta" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Na_ulicę" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Do_mieszkania" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Pracownik_Imię" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Pracownik_Nazwisko" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Data_nadania" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Data_wymaganego_dostarczenia" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Data_rzeczywistego_dostarczenia" Type="DateTime" Precision="0" />
+          <Property Name="Waga" Type="Double" Nullable="false" />
+          <Property Name="Jednostka_wagi" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Opłata" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="Waluta" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_dokumentu_przewozowego" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Typ_płatności" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ubezpieczenie_widok">
+          <Key>
+            <PropertyRef Name="id_Ubezpieczenie" />
+            <PropertyRef Name="Marka" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Typ_pojazdu" />
+            <PropertyRef Name="Nr_rejestracyjny" />
+            <PropertyRef Name="Typ_Ubezpieczenia" />
+            <PropertyRef Name="Firma" />
+            <PropertyRef Name="Nr_polisy" />
+            <PropertyRef Name="Obowiązuje_od" />
+            <PropertyRef Name="Obowiązuje_do" />
+            <PropertyRef Name="Cena" />
+            <PropertyRef Name="Waluta" />
+          </Key>
+          <Property Name="id_Ubezpieczenie" Type="Int32" Nullable="false" />
+          <Property Name="Marka" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Typ_pojazdu" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_rejestracyjny" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Typ_Ubezpieczenia" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Firma" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_polisy" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Obowiązuje_od" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Obowiązuje_do" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Cena" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
+          <Property Name="Waluta" Type="String" MaxLength="5" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Uprawnienie_widok">
+          <Key>
+            <PropertyRef Name="id_Uprawnienia" />
+            <PropertyRef Name="Imię" />
+            <PropertyRef Name="Nazwisko" />
+            <PropertyRef Name="Typ_pojazdu" />
+            <PropertyRef Name="Nr_dokumentu" />
+          </Key>
+          <Property Name="id_Uprawnienia" Type="Int32" Nullable="false" />
+          <Property Name="Imię" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nazwisko" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Typ_pojazdu" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nr_dokumentu" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Ubezpieczenie_Firma_Ubezpieczeniowa">
+          <End Role="Firma_Ubezpieczeniowa" Type="Self.Firma_Ubezpieczeniowa" Multiplicity="1" />
+          <End Role="Ubezpieczenie" Type="Self.Ubezpieczenie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firma_Ubezpieczeniowa">
+              <PropertyRef Name="id_Firma_Ubezpieczeniowa" />
+            </Principal>
+            <Dependent Role="Ubezpieczenie">
+              <PropertyRef Name="id_Firma_Ubezpieczeniowa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Historia_Przesyłka">
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="1" />
+          <End Role="Historia" Type="Self.Historia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Przesyłka">
+              <PropertyRef Name="id_Przesyłka" />
+            </Principal>
+            <Dependent Role="Historia">
+              <PropertyRef Name="id_Przesyłka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Historia_Status">
+          <End Role="Status" Type="Self.Status" Multiplicity="1" />
+          <End Role="Historia" Type="Self.Historia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="id_Status" />
+            </Principal>
+            <Dependent Role="Historia">
+              <PropertyRef Name="id_Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Klient">
+          <End Role="Klient" Type="Self.Klient" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Klient">
+              <PropertyRef Name="id_Klient" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Doręczenia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Klient1">
+          <End Role="Klient" Type="Self.Klient" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Klient">
+              <PropertyRef Name="id_Klient" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Nadawca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Klient2">
+          <End Role="Klient" Type="Self.Klient" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Klient">
+              <PropertyRef Name="id_Klient" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Odbiorca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kurs_Pojazd">
+          <End Role="Pojazd" Type="Self.Pojazd" Multiplicity="1" />
+          <End Role="Kurs" Type="Self.Kurs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pojazd">
+              <PropertyRef Name="id_Pojazd" />
+            </Principal>
+            <Dependent Role="Kurs">
+              <PropertyRef Name="id_Pojazd" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kurs_Pracownik">
+          <End Role="Pracownik" Type="Self.Pracownik" Multiplicity="1" />
+          <End Role="Kurs" Type="Self.Kurs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pracownik">
+              <PropertyRef Name="id_Pracownik" />
+            </Principal>
+            <Dependent Role="Kurs">
+              <PropertyRef Name="id_Pracownik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Kurs">
+          <End Role="Kurs" Type="Self.Kurs" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kurs">
+              <PropertyRef Name="id_Kurs" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Kurs" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pojazd_Typ_Pojazdu">
+          <End Role="Typ_Pojazdu" Type="Self.Typ_Pojazdu" Multiplicity="1" />
+          <End Role="Pojazd" Type="Self.Pojazd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Typ_Pojazdu">
+              <PropertyRef Name="id_Typ_Pojazdu" />
+            </Principal>
+            <Dependent Role="Pojazd">
+              <PropertyRef Name="id_Typ_Pojazdu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ubezpieczenie_Pojazd">
+          <End Role="Pojazd" Type="Self.Pojazd" Multiplicity="1" />
+          <End Role="Ubezpieczenie" Type="Self.Ubezpieczenie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pojazd">
+              <PropertyRef Name="id_Pojazd" />
+            </Principal>
+            <Dependent Role="Ubezpieczenie">
+              <PropertyRef Name="id_Pojazd" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Uprawnienie_Pracownik">
+          <End Role="Pracownik" Type="Self.Pracownik" Multiplicity="1" />
+          <End Role="Uprawnienie" Type="Self.Uprawnienie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pracownik">
+              <PropertyRef Name="id_Pracownik" />
+            </Principal>
+            <Dependent Role="Uprawnienie">
+              <PropertyRef Name="id_Pracownik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Typ_Płatności">
+          <End Role="Typ_Płatności" Type="Self.Typ_Płatności" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Typ_Płatności">
+              <PropertyRef Name="id_Typ_Płatności" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Typ_Płatności" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Przesyłka_Typ_Przesyłki">
+          <End Role="Typ_Przesyłki" Type="Self.Typ_Przesyłki" Multiplicity="1" />
+          <End Role="Przesyłka" Type="Self.Przesyłka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Typ_Przesyłki">
+              <PropertyRef Name="id_Typ_Przesyłki" />
+            </Principal>
+            <Dependent Role="Przesyłka">
+              <PropertyRef Name="id_Typ_Przesyłki" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Uprawnienie_Typ_Pojazdu">
+          <End Role="Typ_Pojazdu" Type="Self.Typ_Pojazdu" Multiplicity="1" />
+          <End Role="Uprawnienie" Type="Self.Uprawnienie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Typ_Pojazdu">
+              <PropertyRef Name="id_Typ_Pojazdu" />
+            </Principal>
+            <Dependent Role="Uprawnienie">
+              <PropertyRef Name="id_Typ_Pojazdu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ubezpieczenie_Typ_Ubezpieczenia">
+          <End Role="Typ_Ubezpieczenia" Type="Self.Typ_Ubezpieczenia" Multiplicity="1" />
+          <End Role="Ubezpieczenie" Type="Self.Ubezpieczenie" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Typ_Ubezpieczenia">
+              <PropertyRef Name="id_Typ_Ubezpieczenia" />
+            </Principal>
+            <Dependent Role="Ubezpieczenie">
+              <PropertyRef Name="id_Typ_Ubezpieczenia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DeliverXEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Firma_Ubezpieczeniowa" EntityType="Self.Firma_Ubezpieczeniowa" />
+          <EntitySet Name="Historia" EntityType="Self.Historia" />
+          <EntitySet Name="Klient" EntityType="Self.Klient" />
+          <EntitySet Name="Kurs" EntityType="Self.Kurs" />
+          <EntitySet Name="Pojazd" EntityType="Self.Pojazd" />
+          <EntitySet Name="Pracownik" EntityType="Self.Pracownik" />
+          <EntitySet Name="Przesyłka" EntityType="Self.Przesyłka" />
+          <EntitySet Name="Status" EntityType="Self.Status" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Typ_Płatności" EntityType="Self.Typ_Płatności" />
+          <EntitySet Name="Typ_Pojazdu" EntityType="Self.Typ_Pojazdu" />
+          <EntitySet Name="Typ_Przesyłki" EntityType="Self.Typ_Przesyłki" />
+          <EntitySet Name="Typ_Ubezpieczenia" EntityType="Self.Typ_Ubezpieczenia" />
+          <EntitySet Name="Ubezpieczenie" EntityType="Self.Ubezpieczenie" />
+          <EntitySet Name="Uprawnienie" EntityType="Self.Uprawnienie" />
+          <EntitySet Name="Historia_widok" EntityType="Self.Historia_widok" />
+          <EntitySet Name="Pojazd_widok" EntityType="Self.Pojazd_widok" />
+          <EntitySet Name="Przesyłka_widok" EntityType="Self.Przesyłka_widok" />
+          <EntitySet Name="Ubezpieczenie_widok" EntityType="Self.Ubezpieczenie_widok" />
+          <EntitySet Name="Uprawnienie_widok" EntityType="Self.Uprawnienie_widok" />
+          <AssociationSet Name="FK_Ubezpieczenie_Firma_Ubezpieczeniowa" Association="Self.FK_Ubezpieczenie_Firma_Ubezpieczeniowa">
+            <End Role="Firma_Ubezpieczeniowa" EntitySet="Firma_Ubezpieczeniowa" />
+            <End Role="Ubezpieczenie" EntitySet="Ubezpieczenie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Historia_Przesyłka" Association="Self.FK_Historia_Przesyłka">
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+            <End Role="Historia" EntitySet="Historia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Historia_Status" Association="Self.FK_Historia_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Historia" EntitySet="Historia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Klient" Association="Self.FK_Przesyłka_Klient">
+            <End Role="Klient" EntitySet="Klient" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Klient1" Association="Self.FK_Przesyłka_Klient1">
+            <End Role="Klient" EntitySet="Klient" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Klient2" Association="Self.FK_Przesyłka_Klient2">
+            <End Role="Klient" EntitySet="Klient" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kurs_Pojazd" Association="Self.FK_Kurs_Pojazd">
+            <End Role="Pojazd" EntitySet="Pojazd" />
+            <End Role="Kurs" EntitySet="Kurs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kurs_Pracownik" Association="Self.FK_Kurs_Pracownik">
+            <End Role="Pracownik" EntitySet="Pracownik" />
+            <End Role="Kurs" EntitySet="Kurs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Kurs" Association="Self.FK_Przesyłka_Kurs">
+            <End Role="Kurs" EntitySet="Kurs" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pojazd_Typ_Pojazdu" Association="Self.FK_Pojazd_Typ_Pojazdu">
+            <End Role="Typ_Pojazdu" EntitySet="Typ_Pojazdu" />
+            <End Role="Pojazd" EntitySet="Pojazd" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ubezpieczenie_Pojazd" Association="Self.FK_Ubezpieczenie_Pojazd">
+            <End Role="Pojazd" EntitySet="Pojazd" />
+            <End Role="Ubezpieczenie" EntitySet="Ubezpieczenie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Uprawnienie_Pracownik" Association="Self.FK_Uprawnienie_Pracownik">
+            <End Role="Pracownik" EntitySet="Pracownik" />
+            <End Role="Uprawnienie" EntitySet="Uprawnienie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Typ_Płatności" Association="Self.FK_Przesyłka_Typ_Płatności">
+            <End Role="Typ_Płatności" EntitySet="Typ_Płatności" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Przesyłka_Typ_Przesyłki" Association="Self.FK_Przesyłka_Typ_Przesyłki">
+            <End Role="Typ_Przesyłki" EntitySet="Typ_Przesyłki" />
+            <End Role="Przesyłka" EntitySet="Przesyłka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Uprawnienie_Typ_Pojazdu" Association="Self.FK_Uprawnienie_Typ_Pojazdu">
+            <End Role="Typ_Pojazdu" EntitySet="Typ_Pojazdu" />
+            <End Role="Uprawnienie" EntitySet="Uprawnienie" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ubezpieczenie_Typ_Ubezpieczenia" Association="Self.FK_Ubezpieczenie_Typ_Ubezpieczenia">
+            <End Role="Typ_Ubezpieczenia" EntitySet="Typ_Ubezpieczenia" />
+            <End Role="Ubezpieczenie" EntitySet="Ubezpieczenie" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DeliverXModelStoreContainer" CdmEntityContainer="DeliverXEntities">
+          <EntitySetMapping Name="Firma_Ubezpieczeniowa">
+            <EntityTypeMapping TypeName="DeliverXModel.Firma_Ubezpieczeniowa">
+              <MappingFragment StoreEntitySet="Firma_Ubezpieczeniowa">
+                <ScalarProperty Name="id_Firma_Ubezpieczeniowa" ColumnName="id_Firma_Ubezpieczeniowa" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="NIP" ColumnName="NIP" />
+                <ScalarProperty Name="Państwo" ColumnName="Państwo" />
+                <ScalarProperty Name="Miasto" ColumnName="Miasto" />
+                <ScalarProperty Name="Kod_pocztowy" ColumnName="Kod_pocztowy" />
+                <ScalarProperty Name="Ulica" ColumnName="Ulica" />
+                <ScalarProperty Name="Nr_budynku" ColumnName="Nr_budynku" />
+                <ScalarProperty Name="Nr_telefonu" ColumnName="Nr_telefonu" />
+                <ScalarProperty Name="Adres_e_mail" ColumnName="Adres_e-mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Historia">
+            <EntityTypeMapping TypeName="DeliverXModel.Historia">
+              <MappingFragment StoreEntitySet="Historia">
+                <ScalarProperty Name="id_Historia" ColumnName="id_Historia" />
+                <ScalarProperty Name="id_Przesyłka" ColumnName="id_Przesyłka" />
+                <ScalarProperty Name="id_Status" ColumnName="id_Status" />
+                <ScalarProperty Name="Data_zmiany_statusu" ColumnName="Data_zmiany_statusu" />
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Klient">
+            <EntityTypeMapping TypeName="DeliverXModel.Klient">
+              <MappingFragment StoreEntitySet="Klient">
+                <ScalarProperty Name="id_Klient" ColumnName="id_Klient" />
+                <ScalarProperty Name="Imię" ColumnName="Imię" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Państwo" ColumnName="Państwo" />
+                <ScalarProperty Name="Miasto" ColumnName="Miasto" />
+                <ScalarProperty Name="Kod_pocztowy" ColumnName="Kod_pocztowy" />
+                <ScalarProperty Name="Ulica" ColumnName="Ulica" />
+                <ScalarProperty Name="Nr_domu_mieszkania" ColumnName="Nr_domu/mieszkania" />
+                <ScalarProperty Name="Nr_telefonu" ColumnName="Nr_telefonu" />
+                <ScalarProperty Name="Adres_e_mail" ColumnName="Adres_e-mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kurs">
+            <EntityTypeMapping TypeName="DeliverXModel.Kurs">
+              <MappingFragment StoreEntitySet="Kurs">
+                <ScalarProperty Name="id_Kurs" ColumnName="id_Kurs" />
+                <ScalarProperty Name="id_Pracownik" ColumnName="id_Pracownik" />
+                <ScalarProperty Name="id_Pojazd" ColumnName="id_Pojazd" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="Liczba_kilometrów" ColumnName="Liczba_kilometrów" />
+                <ScalarProperty Name="Uwagi" ColumnName="Uwagi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pojazd">
+            <EntityTypeMapping TypeName="DeliverXModel.Pojazd">
+              <MappingFragment StoreEntitySet="Pojazd">
+                <ScalarProperty Name="id_Pojazd" ColumnName="id_Pojazd" />
+                <ScalarProperty Name="Marka" ColumnName="Marka" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Nr_rejestracyjny" ColumnName="Nr_rejestracyjny" />
+                <ScalarProperty Name="id_Typ_Pojazdu" ColumnName="id_Typ_Pojazdu" />
+                <ScalarProperty Name="Max_ładowność" ColumnName="Max_ładowność" />
+                <ScalarProperty Name="Jednostka_ładowności" ColumnName="Jednostka_ładowności" />
+                <ScalarProperty Name="Rocznik" ColumnName="Rocznik" />
+                <ScalarProperty Name="Stan_licznika" ColumnName="Stan_licznika" />
+                <ScalarProperty Name="Jednostka_licznika" ColumnName="Jednostka_licznika" />
+                <ScalarProperty Name="Stan_licznika_na_dzień" ColumnName="Stan_licznika_na_dzień" />
+                <ScalarProperty Name="Rodzaj_paliwa" ColumnName="Rodzaj_paliwa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pracownik">
+            <EntityTypeMapping TypeName="DeliverXModel.Pracownik">
+              <MappingFragment StoreEntitySet="Pracownik">
+                <ScalarProperty Name="id_Pracownik" ColumnName="id_Pracownik" />
+                <ScalarProperty Name="Imię" ColumnName="Imię" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="PESEL" ColumnName="PESEL" />
+                <ScalarProperty Name="Data_urodzenia" ColumnName="Data_urodzenia" />
+                <ScalarProperty Name="Data_zatrudnienia" ColumnName="Data_zatrudnienia" />
+                <ScalarProperty Name="Państwo" ColumnName="Państwo" />
+                <ScalarProperty Name="Miasto" ColumnName="Miasto" />
+                <ScalarProperty Name="Kod_pocztowy" ColumnName="Kod_pocztowy" />
+                <ScalarProperty Name="Ulica" ColumnName="Ulica" />
+                <ScalarProperty Name="Nr_domu_mieszkania" ColumnName="Nr_domu/mieszkania" />
+                <ScalarProperty Name="Nr_telefonu" ColumnName="Nr_telefonu" />
+                <ScalarProperty Name="Adres_e_mail" ColumnName="Adres_e-mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Przesyłka">
+            <EntityTypeMapping TypeName="DeliverXModel.Przesyłka">
+              <MappingFragment StoreEntitySet="Przesyłka">
+                <ScalarProperty Name="id_Przesyłka" ColumnName="id_Przesyłka" />
+                <ScalarProperty Name="id_Typ_Przesyłki" ColumnName="id_Typ_Przesyłki" />
+                <ScalarProperty Name="id_Doręczenia" ColumnName="id_Doręczenia" />
+                <ScalarProperty Name="id_Nadawca" ColumnName="id_Nadawca" />
+                <ScalarProperty Name="id_Odbiorca" ColumnName="id_Odbiorca" />
+                <ScalarProperty Name="id_Kurs" ColumnName="id_Kurs" />
+                <ScalarProperty Name="Data_nadania" ColumnName="Data_nadania" />
+                <ScalarProperty Name="Data_wymaganego_dostarczenia" ColumnName="Data_wymaganego_dostarczenia" />
+                <ScalarProperty Name="Data_rzeczywistego_dostarczenia" ColumnName="Data_rzeczywistego_dostarczenia" />
+                <ScalarProperty Name="Waga" ColumnName="Waga" />
+                <ScalarProperty Name="Jednostka_wagi" ColumnName="Jednostka_wagi" />
+                <ScalarProperty Name="Opłata" ColumnName="Opłata" />
+                <ScalarProperty Name="Waluta" ColumnName="Waluta" />
+                <ScalarProperty Name="Nr_dokumentu_przewozowego" ColumnName="Nr_dokumentu_przewozowego" />
+                <ScalarProperty Name="id_Typ_Płatności" ColumnName="id_Typ_Płatności" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status">
+            <EntityTypeMapping TypeName="DeliverXModel.Status">
+              <MappingFragment StoreEntitySet="Status">
+                <ScalarProperty Name="id_Status" ColumnName="id_Status" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DeliverXModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Typ_Płatności">
+            <EntityTypeMapping TypeName="DeliverXModel.Typ_Płatności">
+              <MappingFragment StoreEntitySet="Typ_Płatności">
+                <ScalarProperty Name="id_Typ_Płatności" ColumnName="id_Typ_Płatności" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Typ_Pojazdu">
+            <EntityTypeMapping TypeName="DeliverXModel.Typ_Pojazdu">
+              <MappingFragment StoreEntitySet="Typ_Pojazdu">
+                <ScalarProperty Name="id_Typ_Pojazdu" ColumnName="id_Typ_Pojazdu" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Typ_Przesyłki">
+            <EntityTypeMapping TypeName="DeliverXModel.Typ_Przesyłki">
+              <MappingFragment StoreEntitySet="Typ_Przesyłki">
+                <ScalarProperty Name="id_Typ_Przesyłki" ColumnName="id_Typ_Przesyłki" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Typ_Ubezpieczenia">
+            <EntityTypeMapping TypeName="DeliverXModel.Typ_Ubezpieczenia">
+              <MappingFragment StoreEntitySet="Typ_Ubezpieczenia">
+                <ScalarProperty Name="id_Typ_Ubezpieczenia" ColumnName="id_Typ_Ubezpieczenia" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ubezpieczenie">
+            <EntityTypeMapping TypeName="DeliverXModel.Ubezpieczenie">
+              <MappingFragment StoreEntitySet="Ubezpieczenie">
+                <ScalarProperty Name="id_Ubezpieczenie" ColumnName="id_Ubezpieczenie" />
+                <ScalarProperty Name="id_Pojazd" ColumnName="id_Pojazd" />
+                <ScalarProperty Name="id_Typ_Ubezpieczenia" ColumnName="id_Typ_Ubezpieczenia" />
+                <ScalarProperty Name="id_Firma_Ubezpieczeniowa" ColumnName="id_Firma_Ubezpieczeniowa" />
+                <ScalarProperty Name="Nr_polisy" ColumnName="Nr_polisy" />
+                <ScalarProperty Name="Obowiązuje_od" ColumnName="Obowiązuje_od" />
+                <ScalarProperty Name="Obowiązuje_do" ColumnName="Obowiązuje_do" />
+                <ScalarProperty Name="Cena" ColumnName="Cena" />
+                <ScalarProperty Name="Waluta" ColumnName="Waluta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Uprawnienie">
+            <EntityTypeMapping TypeName="DeliverXModel.Uprawnienie">
+              <MappingFragment StoreEntitySet="Uprawnienie">
+                <ScalarProperty Name="id_Uprawnienia" ColumnName="id_Uprawnienia" />
+                <ScalarProperty Name="id_Pracownik" ColumnName="id_Pracownik" />
+                <ScalarProperty Name="id_Typ_Pojazdu" ColumnName="id_Typ_Pojazdu" />
+                <ScalarProperty Name="Nr_dokumentu" ColumnName="Nr_dokumentu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Historia_widok">
+            <EntityTypeMapping TypeName="DeliverXModel.Historia_widok">
+              <MappingFragment StoreEntitySet="Historia_widok">
+                <ScalarProperty Name="id_Historia" ColumnName="id_Historia" />
+                <ScalarProperty Name="id_Przesyłka" ColumnName="id_Przesyłka" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="Data_zmiany_statusu" ColumnName="Data_zmiany_statusu" />
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pojazd_widok">
+            <EntityTypeMapping TypeName="DeliverXModel.Pojazd_widok">
+              <MappingFragment StoreEntitySet="Pojazd_widok">
+                <ScalarProperty Name="id_Pojazd" ColumnName="id_Pojazd" />
+                <ScalarProperty Name="Marka" ColumnName="Marka" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Nr_rejestracyjny" ColumnName="Nr_rejestracyjny" />
+                <ScalarProperty Name="Typ_pojazdu" ColumnName="Typ_pojazdu" />
+                <ScalarProperty Name="Max_ładowność" ColumnName="Max_ładowność" />
+                <ScalarProperty Name="Jednostka_ładowności" ColumnName="Jednostka_ładowności" />
+                <ScalarProperty Name="Rocznik" ColumnName="Rocznik" />
+                <ScalarProperty Name="Stan_licznika" ColumnName="Stan_licznika" />
+                <ScalarProperty Name="Jednostka_licznika" ColumnName="Jednostka_licznika" />
+                <ScalarProperty Name="Stan_licznika_na_dzień" ColumnName="Stan_licznika_na_dzień" />
+                <ScalarProperty Name="Rodzaj_paliwa" ColumnName="Rodzaj_paliwa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Przesyłka_widok">
+            <EntityTypeMapping TypeName="DeliverXModel.Przesyłka_widok">
+              <MappingFragment StoreEntitySet="Przesyłka_widok">
+                <ScalarProperty Name="id_Przesyłka" ColumnName="id_Przesyłka" />
+                <ScalarProperty Name="Typ_Przesyłki" ColumnName="Typ_Przesyłki" />
+                <ScalarProperty Name="Odbiorca_Imię" ColumnName="Odbiorca_Imię" />
+                <ScalarProperty Name="Odbiorca_Nazwisko" ColumnName="Odbiorca_Nazwisko" />
+                <ScalarProperty Name="Nadawca_Imię" ColumnName="Nadawca_Imię" />
+                <ScalarProperty Name="Nadawca_Nazwisko" ColumnName="Nadawca_Nazwisko" />
+                <ScalarProperty Name="Do_miasta" ColumnName="Do_miasta" />
+                <ScalarProperty Name="Na_ulicę" ColumnName="Na_ulicę" />
+                <ScalarProperty Name="Do_mieszkania" ColumnName="Do_mieszkania" />
+                <ScalarProperty Name="Pracownik_Imię" ColumnName="Pracownik_Imię" />
+                <ScalarProperty Name="Pracownik_Nazwisko" ColumnName="Pracownik_Nazwisko" />
+                <ScalarProperty Name="Data_nadania" ColumnName="Data_nadania" />
+                <ScalarProperty Name="Data_wymaganego_dostarczenia" ColumnName="Data_wymaganego_dostarczenia" />
+                <ScalarProperty Name="Data_rzeczywistego_dostarczenia" ColumnName="Data_rzeczywistego_dostarczenia" />
+                <ScalarProperty Name="Waga" ColumnName="Waga" />
+                <ScalarProperty Name="Jednostka_wagi" ColumnName="Jednostka_wagi" />
+                <ScalarProperty Name="Opłata" ColumnName="Opłata" />
+                <ScalarProperty Name="Waluta" ColumnName="Waluta" />
+                <ScalarProperty Name="Nr_dokumentu_przewozowego" ColumnName="Nr_dokumentu_przewozowego" />
+                <ScalarProperty Name="Typ_płatności" ColumnName="Typ_płatności" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ubezpieczenie_widok">
+            <EntityTypeMapping TypeName="DeliverXModel.Ubezpieczenie_widok">
+              <MappingFragment StoreEntitySet="Ubezpieczenie_widok">
+                <ScalarProperty Name="id_Ubezpieczenie" ColumnName="id_Ubezpieczenie" />
+                <ScalarProperty Name="Marka" ColumnName="Marka" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Typ_pojazdu" ColumnName="Typ_pojazdu" />
+                <ScalarProperty Name="Nr_rejestracyjny" ColumnName="Nr_rejestracyjny" />
+                <ScalarProperty Name="Typ_Ubezpieczenia" ColumnName="Typ_Ubezpieczenia" />
+                <ScalarProperty Name="Firma" ColumnName="Firma" />
+                <ScalarProperty Name="Nr_polisy" ColumnName="Nr_polisy" />
+                <ScalarProperty Name="Obowiązuje_od" ColumnName="Obowiązuje_od" />
+                <ScalarProperty Name="Obowiązuje_do" ColumnName="Obowiązuje_do" />
+                <ScalarProperty Name="Cena" ColumnName="Cena" />
+                <ScalarProperty Name="Waluta" ColumnName="Waluta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Uprawnienie_widok">
+            <EntityTypeMapping TypeName="DeliverXModel.Uprawnienie_widok">
+              <MappingFragment StoreEntitySet="Uprawnienie_widok">
+                <ScalarProperty Name="id_Uprawnienia" ColumnName="id_Uprawnienia" />
+                <ScalarProperty Name="Imię" ColumnName="Imię" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Typ_pojazdu" ColumnName="Typ_pojazdu" />
+                <ScalarProperty Name="Nr_dokumentu" ColumnName="Nr_dokumentu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

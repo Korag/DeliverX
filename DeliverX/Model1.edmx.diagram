@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e991178273834ca680a79490b0b44cc2" Name="Diagram1" ZoomLevel="50">
+        <EntityTypeShape EntityType="DeliverXModel.Firma_Ubezpieczeniowa" Width="1.5" PointX="1.5" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Historia" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Klient" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Kurs" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Pojazd" Width="1.5" PointX="1.5" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Pracownik" Width="1.5" PointX="1.5" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Przesyłka" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Status" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Typ_Płatności" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Typ_Pojazdu" Width="1.5" PointX="1.5" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Typ_Przesyłki" Width="1.5" PointX="0.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Typ_Ubezpieczenia" Width="1.5" PointX="1.5" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Ubezpieczenie" Width="1.5" PointX="3.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Uprawnienie" Width="1.5" PointX="3.75" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Historia_widok" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Pojazd_widok" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Przesyłka_widok" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Ubezpieczenie_widok" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeliverXModel.Uprawnienie_widok" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="DeliverXModel.FK_Ubezpieczenie_Firma_Ubezpieczeniowa" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Historia_Przesyłka" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Historia_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Przesyłka_Klient" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Przesyłka_Klient1" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Przesyłka_Klient2" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Kurs_Pojazd" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Kurs_Pracownik" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Przesyłka_Kurs" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Pojazd_Typ_Pojazdu" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Ubezpieczenie_Pojazd" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Uprawnienie_Pracownik" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Przesyłka_Typ_Płatności" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Przesyłka_Typ_Przesyłki" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Uprawnienie_Typ_Pojazdu" ManuallyRouted="false" />
+        <AssociationConnector Association="DeliverXModel.FK_Ubezpieczenie_Typ_Ubezpieczenia" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
