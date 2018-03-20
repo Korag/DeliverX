@@ -6,10 +6,18 @@
         xmlns:local="clr-namespace:DeliverX"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
-    <Grid>
-        <Image HorizontalAlignment="Left" Height="172" VerticalAlignment="Top" Width="554" Source="Images/deliverX - małe.jpg"/>
+    <Border>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#4C000000" Offset="0"/>
+                    <GradientStop Color="#3FFFFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Image HorizontalAlignment="Left" Height="172" VerticalAlignment="Top" Width="554" Source="Images/deliverX - małe.jpg"/>
         <Button Content="SELECT" HorizontalAlignment="Left" Height="35" Margin="407,297,0,0" VerticalAlignment="Top" Width="101" Click="Button_Click"/>
 
-
-    </Grid>
+           
+        </Grid>
+    </Border>
 </Window>
