@@ -28,6 +28,27 @@ namespace DeliverX
         {
             MainWindow window = new MainWindow();
             window.Show();
+
+
+            // s= "Select * FROM KONTO WHERE Usr = @USR AND PASS = @PSW" ;
+            // SqlCommand cmd = new SqlCommand(s, connect);
+            // cmd.Parameters.AddWithValue("@USR", txtUsr.Text);
+            // cmd.Parameters.AddWithValue("@PSW", txtPsw.Text);
+            // cmd.ExecuteReader();
+            // NewQuery();
+
+            // Procedua składowana
+            // s="CREATE PROCEDURE LB @USR varchar(16), @PSW varchar(16), @STK int AS SELECT * FROM BANK WHERE USR=@USR AND PSW=@PSW;
+            // cmd = new SqlCommand(s,connect);
+            // cmd.ExecuteNonQuery();
+            // cmd = new SqlCommand(LB,connect)
+            // cmd.Parameters.AddWithValue("@USR", txtUsr.Text);
+            // cmd.Parameters.AddWithValue("@PSW", txtPsw.Text);
+            //ExecuteReader();
+
+            // var Q = cts.LB(txtUsr.Text, txtPass.Text)
+
+
             this.Hide();
         }
 
