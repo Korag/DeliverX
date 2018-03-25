@@ -1,0 +1,14 @@
+﻿<Page x:Class="DeliverX.Pages.Logo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeliverX.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="190" d:DesignWidth="536"
+      Title="Logo">
+
+    <Grid>
+        <Label x:Name="label" Content="LOGO" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="202,77,0,0"/>
+    </Grid>
+</Page>

@@ -28,7 +28,7 @@ namespace DeliverX
         {
             MainWindow window = new MainWindow();
             window.Show();
-
+           
 
             // s= "Select * FROM KONTO WHERE Usr = @USR AND PASS = @PSW" ;
             // SqlCommand cmd = new SqlCommand(s, connect);

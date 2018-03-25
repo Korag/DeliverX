@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Runtime.InteropServices;
+using DeliverX.Pages;
 
 namespace DeliverX
 {
@@ -36,8 +37,8 @@ namespace DeliverX
     {
         public MainWindow()
         {
-          
             InitializeComponent();
+            ContentFrame.Content = new Logo();
 
 
             var handle = NativeMethods.GetConsoleWindow();
@@ -59,6 +60,25 @@ namespace DeliverX
                 sw.WriteLine("cos");
                 sw.WriteLine(pracownik);
             }
+        }
+
+
+        private void ObslugaButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Content = new Obsluga();
+        }
+
+        private void ZarzadzanieButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Content = new Zarzadzanie();
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow window = new LoginWindow();
+            window.Show();
+
+            this.Close();
         }
     }
 }
