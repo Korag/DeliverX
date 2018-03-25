@@ -216,6 +216,7 @@
   <ItemGroup>
     <Resource Include="Images\deliverX - małe.jpg" />
     <Resource Include="Images\deliverX_favicon.png" />
+    <Resource Include="Images\deliverX_transparent.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>

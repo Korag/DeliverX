@@ -24,5 +24,55 @@ namespace DeliverX.Pages
         {
             InitializeComponent();
         }
+
+        private void PojazdyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TypyPojazdowButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UbezpieczeniaPojazdowButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FirmyUbezpieczenioButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TypyUbezpieczeniaButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TypyPrzesylekButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TypyStatusowPrzesylekButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TypyPlatnosciButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PracownicyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void UprawnieniaPracownikowButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

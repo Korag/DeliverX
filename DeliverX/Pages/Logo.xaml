@@ -9,6 +9,6 @@
       Title="Logo">
 
     <Grid>
-        <Label x:Name="label" Content="LOGO" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="202,77,0,0"/>
+        <Image x:Name="image" HorizontalAlignment="Center" Height="170" Margin="41,10,42,10" VerticalAlignment="Center" Width="453" Source="/DeliverX;component/Images/deliverX_transparent.png" RenderTransformOrigin="0.5,0.5" Opacity="0.3"/>
     </Grid>
 </Page>

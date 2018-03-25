@@ -9,6 +9,83 @@
       Title="Obsluga">
 
     <Grid>
-        <Label x:Name="label" Content="PANEL OBSLUGI" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="202,77,0,0"/>
+        <Image x:Name="image" Margin="104,36,104,30" Source="/DeliverX;component/Images/deliverX_transparent.png" RenderTransformOrigin="0.5,0.5" Opacity="0.3">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="19.778"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Grid HorizontalAlignment="Left" Margin="10,60,0,60" Width="156">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,0" StartPoint="1,0">
+                    <GradientStop Color="white" Offset="0"/>
+                    <GradientStop Color="#FF204168" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Button x:Name="KursyButton" Content="Kursy" HorizontalAlignment="Left" Width="156" Click="KursyButton_Click" FontWeight="Bold" Foreground="White" Margin="0,24,0,25">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFADD2E2" Offset="0"/>
+                        <GradientStop Color="#FF133D8F" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+        <Grid Height="69" Margin="190,10,190,0" VerticalAlignment="Top">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF204168" Offset="0"/>
+                    <GradientStop Color="white" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Button x:Name="PrzesylkiButton" Content="Przesyłki" HorizontalAlignment="Left" Width="156" Click="PrzesylkaButton_Click" FontWeight="Bold" Foreground="White" Margin="0,24,0,25">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFADD2E2" Offset="0"/>
+                        <GradientStop Color="#FF133D8F" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+        <Grid HorizontalAlignment="Left" Margin="370,61,0,0" Width="156" Height="69" VerticalAlignment="Top">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0,0" StartPoint="0.5,0">
+                    <GradientStop Color="#FF204168" Offset="0"/>
+                    <GradientStop Color="white" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Button x:Name="StatusyPrzesylekButton" Content="Statusy przesyłek" HorizontalAlignment="Left" Width="156" Click="StatusyPrzesylekButton_Click" FontWeight="Bold" Foreground="White" Margin="0,24,0,25">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFADD2E2" Offset="0"/>
+                        <GradientStop Color="#FF133D8F" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+        <Grid HorizontalAlignment="Left" Margin="190,110,0,10" Width="156">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
+                    <GradientStop Color="#FF204168" Offset="0"/>
+                    <GradientStop Color="white" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Button x:Name="KlienciButton" Content="Klienci" HorizontalAlignment="Left" Width="156" Click="KlienciButton_Click" FontWeight="Bold" Foreground="White" Margin="0,24,0,25">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFADD2E2" Offset="0"/>
+                        <GradientStop Color="#FF133D8F" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+
     </Grid>
 </Page>
