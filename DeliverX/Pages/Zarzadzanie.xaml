@@ -58,7 +58,7 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Button x:Name="TypUbezpieczeniaButton" Content="Typy ubezpieczeń" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,83,0,0" Click="TypyUbezpieczeniaButton_Click" FontWeight="Bold" Foreground="White">
+            <Button x:Name="TypUbezpieczenButton" Content="Typy ubezpieczeń" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,83,0,0" Click="TypyUbezpieczenButton_Click" FontWeight="Bold" Foreground="White">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFADD2E2" Offset="0"/>

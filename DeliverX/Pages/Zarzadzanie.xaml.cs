@@ -32,7 +32,8 @@ namespace DeliverX.Pages
 
         private void TypyPojazdowButton_Click(object sender, RoutedEventArgs e)
         {
-
+            TypyPojazdowWindow TypyPojazdowWindow = new TypyPojazdowWindow();
+            TypyPojazdowWindow.Show();
         }
 
         private void UbezpieczeniaPojazdowButton_Click(object sender, RoutedEventArgs e)
@@ -45,24 +46,28 @@ namespace DeliverX.Pages
 
         }
 
-        private void TypyUbezpieczeniaButton_Click(object sender, RoutedEventArgs e)
+        private void TypyUbezpieczenButton_Click(object sender, RoutedEventArgs e)
         {
-
+            TypyUbezpieczenWindow TypyUbezpieczenWindow = new TypyUbezpieczenWindow();
+            TypyUbezpieczenWindow.Show();
         }
 
         private void TypyPrzesylekButton_Click(object sender, RoutedEventArgs e)
         {
-
+            TypyPrzesylekWindow TypyPrzesylekWindow = new TypyPrzesylekWindow();
+            TypyPrzesylekWindow.Show();
         }
 
         private void TypyStatusowPrzesylekButton_Click(object sender, RoutedEventArgs e)
         {
-
+            TypyStatusowPrzesylekWindow TypyStatusowPrzesylekWindow = new TypyStatusowPrzesylekWindow();
+            TypyStatusowPrzesylekWindow.Show();
         }
 
         private void TypyPlatnosciButton_Click(object sender, RoutedEventArgs e)
         {
-
+            TypyPlatnosciWindow TypyPlatnosciWindow = new TypyPlatnosciWindow();
+            TypyPlatnosciWindow.Show();
         }
 
         private void PracownicyButton_Click(object sender, RoutedEventArgs e)
