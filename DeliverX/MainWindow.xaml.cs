@@ -75,9 +75,8 @@ namespace DeliverX
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow window = new LoginWindow();
-            window.Show();
-
+            LoginWindow LoginWindow= new LoginWindow();
+            LoginWindow.Show();
             this.Close();
         }
     }

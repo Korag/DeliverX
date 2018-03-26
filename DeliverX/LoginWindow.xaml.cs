@@ -26,8 +26,9 @@ namespace DeliverX
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow window = new MainWindow();
-            window.Show();
+            MainWindow MainWindow = new MainWindow();
+            MainWindow.Show();
+            this.Close();
            
 
             // s= "Select * FROM KONTO WHERE Usr = @USR AND PASS = @PSW" ;
@@ -47,9 +48,6 @@ namespace DeliverX
             //ExecuteReader();
 
             // var Q = cts.LB(txtUsr.Text, txtPass.Text)
-
-
-            this.Hide();
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
