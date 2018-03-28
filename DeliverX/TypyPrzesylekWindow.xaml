@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DeliverX"
         mc:Ignorable="d"
         Icon="Images\deliverX_favicon.png"
-        Title="TypyPrzesylekWindow" Height="720" Width="1280">
+        Title="TypyPrzesylekWindow" Height="720" Width="1280" MinHeight="360" MinWidth="640">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#4C0046FF" Offset="0"/>
@@ -29,81 +29,18 @@
                             <GradientStop Color="#FFB0B0B0" Offset="1"/>
                         </LinearGradientBrush>
                     </Grid.Background>
-                    <Label x:Name="DostepneLabel" Content="Dostępne typy przesyłek:" Height="28" Margin="116,18,270,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1" Foreground="White">
-                        <Label.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="#FFAFBACF" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Label.Background>
-                    </Label>
-                    <Label x:Name="DodajLabel" Content="Dodawanie nowego typu przesyłek:" HorizontalAlignment="Left" Height="28" Margin="10,67,0,0" VerticalAlignment="Top" Width="209" BorderBrush="Black" BorderThickness="1" Foreground="White">
-                        <Label.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="#FFAFBACF" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Label.Background>
-                    </Label>
-                    <Button x:Name="DodajButton" Content="Dodaj typ" HorizontalAlignment="Left" Width="100" Click="DodajButton_Click" FontWeight="Bold" Foreground="White" Margin="425,67,0,95" BorderBrush="Black">
-                        <Button.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#FFADD2E2" Offset="0"/>
-                                <GradientStop Color="#FF133D8F" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <TextBox x:Name="DodajTextBox" HorizontalAlignment="Left" Height="28" Margin="219,67,0,0" Padding="0 5 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" BorderBrush="Black">
-                        <TextBox.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="White" Offset="0"/>
-                                <GradientStop Color="#FF86C8FF" Offset="1"/>
-                            </LinearGradientBrush>
-                        </TextBox.Background>
-                    </TextBox>
-                    <Label x:Name="UsunLabel" Content="Usuwanie wybranego typu przesyłek:" HorizontalAlignment="Left" Height="28" Margin="10,100,0,0" VerticalAlignment="Top" Width="209" BorderBrush="Black" BorderThickness="1" Foreground="White">
-                        <Label.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="#FFAFBACF" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Label.Background>
-                    </Label>
-                    <Button x:Name="UsunButton" Content="Usuń typ" HorizontalAlignment="Left" Width="100" Click="UsunButton_Click" FontWeight="Bold" Foreground="White" Margin="425,100,0,62" BorderBrush="Black">
-                        <Button.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#FFADD2E2" Offset="0"/>
-                                <GradientStop Color="#FF133D8F" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-                    </Button>
-                    <ComboBox x:Name="UsunComboBox" Height="28" Margin="266,18,116,0" VerticalAlignment="Top" BorderBrush="Black" Style="{DynamicResource ComboBoxStyle1}"/>
-                    <ComboBox x:Name="DostepneComboBox"  Height="28" Margin="219,100,111,0" VerticalAlignment="Top" BorderBrush="Black"  Style="{DynamicResource ComboBoxStyle1}"/>
-                    <Label x:Name="AktualizujLabel" Content="Wybierz typ aktualizowany:" Height="28" Margin="10,153,371,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1" Foreground="White">
-                        <Label.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="#FFAFBACF" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Label.Background>
-                    </Label>
-                    <Label x:Name="AktualizujNowaLabel" Content="Nowa nazwa:" Height="28" Margin="297,153,155,0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1" Foreground="White">
-                        <Label.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="Black" Offset="0"/>
-                                <GradientStop Color="#FFAFBACF" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Label.Background>
-                    </Label>
-                    <ComboBox x:Name="AktualizujComboBox"  Height="28" Margin="165,153,257,0" VerticalAlignment="Top" BorderBrush="Black"  Style="{DynamicResource ComboBoxStyle1}"/>
-                    <TextBox x:Name="AktualizujTextBox" HorizontalAlignment="Left" Height="28" Margin="381,153,0,0" Padding="0 5 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" BorderBrush="Black">
-                        <TextBox.Background>
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="White" Offset="0"/>
-                                <GradientStop Color="#FF86C8FF" Offset="1"/>
-                            </LinearGradientBrush>
-                        </TextBox.Background>
-                    </TextBox>
+                    <Label x:Name="DostepneLabel" Content="Dostępne typy przesyłek:" Height="28" Margin="116,18,270,0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}"/>
+                    <Label x:Name="DodajLabel" Content="Dodawanie nowego typu przesyłek:" HorizontalAlignment="Left" Height="28" Margin="10,67,0,0" VerticalAlignment="Top" Width="209" Style="{DynamicResource BlackLabel}"/>
+                    <Button x:Name="DodajButton" Content="Dodaj typ" HorizontalAlignment="Left" Width="100" Click="DodajButton_Click" FontWeight="Bold" Margin="425,67,0,95" Style="{DynamicResource BlueButton}"/>
+                    <TextBox x:Name="DodajTextBox" HorizontalAlignment="Left" Height="28" Margin="219,67,0,0" Padding="0 5 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Style="{DynamicResource BlueTextBox}"/>
+                    <Label x:Name="UsunLabel" Content="Usuwanie wybranego typu przesyłek:" HorizontalAlignment="Left" Height="28" Margin="10,100,0,0" VerticalAlignment="Top" Width="209" Style="{DynamicResource BlackLabel}"/>
+                    <Button x:Name="UsunButton" Content="Usuń typ" HorizontalAlignment="Left" Width="100" Click="UsunButton_Click" FontWeight="Bold" Margin="425,100,0,62" Style="{DynamicResource BlueButton}"/>
+                    <ComboBox x:Name="UsunComboBox" Height="28" Margin="266,18,116,0" VerticalAlignment="Top" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+                    <ComboBox x:Name="DostepneComboBox"  Height="28" Margin="219,100,111,0" VerticalAlignment="Top" BorderBrush="Black"   Template="{DynamicResource BlueComboBox}"/>
+                    <Label x:Name="AktualizujLabel" Content="Wybierz typ aktualizowany:" Height="28" Margin="10,153,371,0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}"/>
+                    <Label x:Name="AktualizujNowaLabel" Content="Nowa nazwa:" Height="28" Margin="297,153,155,0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}"/>
+                    <ComboBox x:Name="AktualizujComboBox"  Height="28" Margin="165,153,257,0" VerticalAlignment="Top" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+                    <TextBox x:Name="AktualizujTextBox" HorizontalAlignment="Left" Height="28" Margin="381,153,0,0" Padding="0 5 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Style="{DynamicResource BlueTextBox}"/>
                 </Grid>
                 <Image Height="67" VerticalAlignment="Top" Source="Images/deliverX_transparent.png" Margin="183,3,183,0" Opacity="0.5"/>
                 <Label Content="© Łukasz Czepielik 2018" Foreground="#FFB7B7BF" FontWeight="Bold" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="432,0,0,-5"/>

@@ -17,22 +17,8 @@
                     <GradientStop Color="white" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Button x:Name="TypyPojazdowButton" Content="Typy pojazdów" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="180,5,0,0" Click="TypyPojazdowButton_Click" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.241,-1.425">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFADD2E2" Offset="0"/>
-                        <GradientStop Color="#FF133D8F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="PojazdyButton" Content="Pojazdy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,5,0,0" Click="PojazdyButton_Click" FontWeight="Bold" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFADD2E2" Offset="0"/>
-                        <GradientStop Color="#FF133D8F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button x:Name="TypyPojazdowButton" Content="Typy pojazdów" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="180,5,0,0" Click="TypyPojazdowButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="PojazdyButton" Content="Pojazdy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,5,0,0" Click="PojazdyButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
         </Grid>
 
         <Grid HorizontalAlignment="Left" Height="103" Margin="10,77,0,0" VerticalAlignment="Top" Width="156">
@@ -42,30 +28,9 @@
                     <GradientStop Color="white" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Button x:Name="UbezpieczeniaPojazdowButton" Content="Ubezpieczenia pojazdów" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Click="UbezpieczeniaPojazdowButton_Click" FontWeight="Bold" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFADD2E2" Offset="0"/>
-                        <GradientStop Color="#FF133D8F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="FirmyUbezpieczenioweButton" Content="Firmy ubezpieczeniowe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,42,0,0" Click="FirmyUbezpieczenioButton_Click" FontWeight="Bold" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFADD2E2" Offset="0"/>
-                        <GradientStop Color="#FF133D8F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="TypUbezpieczenButton" Content="Typy ubezpieczeń" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,83,0,0" Click="TypyUbezpieczenButton_Click" FontWeight="Bold" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFADD2E2" Offset="0"/>
-                        <GradientStop Color="#FF133D8F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button x:Name="UbezpieczeniaPojazdowButton" Content="Ubezpieczenia pojazdów" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Click="UbezpieczeniaPojazdowButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="FirmyUbezpieczenioweButton" Content="Firmy ubezpieczeniowe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,42,0,0" Click="FirmyUbezpieczenioButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="TypUbezpieczenButton" Content="Typy ubezpieczeń" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,83,0,0" Click="TypyUbezpieczenButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
         </Grid>
 
         <Grid HorizontalAlignment="Left" Height="103" VerticalAlignment="Top" Width="156" Margin="190,77,0,0">
@@ -81,30 +46,9 @@
                     <GradientStop Color="white" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Button x:Name="TypyPrzesylekButton" Content="Typy przesyłek" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Click="TypyPrzesylekButton_Click" FontWeight="Bold" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFADD2E2" Offset="0"/>
-                        <GradientStop Color="#FF133D8F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="TypyStatusowPrzesylekButton" Content="Typy statusów przesyłek" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,42,0,0" Click="TypyStatusowPrzesylekButton_Click" FontWeight="Bold" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFADD2E2" Offset="0"/>
-                        <GradientStop Color="#FF133D8F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="TypyPlatnosciButton" Content="Typy płatności" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,83,0,0" Click="TypyPlatnosciButton_Click" FontWeight="Bold" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFADD2E2" Offset="0"/>
-                        <GradientStop Color="#FF133D8F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button x:Name="TypyPrzesylekButton" Content="Typy przesyłek" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Click="TypyPrzesylekButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="TypyStatusowPrzesylekButton" Content="Typy statusów przesyłek" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,42,0,0" Click="TypyStatusowPrzesylekButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="TypyPlatnosciButton" Content="Typy płatności" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,83,0,0" Click="TypyPlatnosciButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
         </Grid>
 
         <Grid HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="156" Margin="370,119,0,0">
@@ -114,22 +58,8 @@
                     <GradientStop Color="white" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Button x:Name="PracownikButton" Content="Pracownicy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Click="PracownicyButton_Click" FontWeight="Bold" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFADD2E2" Offset="0"/>
-                        <GradientStop Color="#FF133D8F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
-            <Button x:Name="UprawnieniaPracownikowButton" Content="Uprawnienia pracowników" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,41,0,0" Click="UprawnieniaPracownikowButton_Click" FontWeight="Bold" Foreground="White">
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFADD2E2" Offset="0"/>
-                        <GradientStop Color="#FF133D8F" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-            </Button>
+            <Button x:Name="PracownikButton" Content="Pracownicy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Click="PracownicyButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="UprawnieniaPracownikowButton" Content="Uprawnienia pracowników" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,41,0,0" Click="UprawnieniaPracownikowButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
         </Grid>
     </Grid>
 </Page>

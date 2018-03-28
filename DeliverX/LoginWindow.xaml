@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DeliverX"
         mc:Ignorable="d"
         Icon="Images\deliverX_favicon.png"
-        Title="LoginWindow" Height="400" Width="500">
+        Title="LoginWindow" Height="540" Width="700" MinHeight="250" MinWidth="370">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#4C0046FF" Offset="0"/>
@@ -36,7 +36,7 @@
                         <ColumnDefinition Width="150*"/>
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
-                        <Label Content="Użytkownik:" Foreground="White" BorderThickness="1" BorderBrush="Black" FontWeight="Bold" Height="30" Margin="0 20 0 0" VerticalAlignment="Top">
+                        <Label Content="Użytkownik:" Foreground="White" BorderThickness="1" BorderBrush="Black" FontWeight="Bold" Height="30" Margin="0 20 0 0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}">
                             <Label.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black" Offset="0"/>
@@ -44,15 +44,10 @@
                                 </LinearGradientBrush>
                             </Label.Background>
                         </Label>
-                        <Label Content="Hasło:" Foreground="White" BorderThickness="1" BorderBrush="Black" FontWeight="Bold" Height="30" Margin="0 20 0 0" VerticalAlignment="Top">
-                            <Label.Background>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="Black" Offset="0"/>
-                                    <GradientStop Color="#FFAFBACF" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Label.Background>
+                        <Label Content="Hasło:" FontWeight="Bold" Height="30" Margin="0 20 0 0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}">
+                           
                         </Label>
-                        <Button x:Name="LoginButton" Foreground="White" BorderBrush="Black" FontWeight="Bold" Content="LOGIN" Margin="0 30 0 0" Click="LoginButton_Click">
+                        <Button x:Name="LoginButton" Foreground="White" BorderBrush="Black" FontWeight="Bold" Content="LOGIN" Margin="0 30 0 0" Click="LoginButton_Click" Style="{DynamicResource BlueButton}">
                             <Button.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="#FFADD2E2" Offset="0"/>
@@ -64,14 +59,7 @@
                     <StackPanel Grid.Column="1" Margin="0,0,0,10">
                         <TextBox x:Name="UserNameBox" Background="White" FontWeight="Bold" BorderBrush="Gray" BorderThickness="1" Padding="0 4 0 0"  Height="30" Margin="0 20 0 0" VerticalAlignment="Top" />
                         <PasswordBox x:Name="PasswordBox" Background="White" FontWeight="Bold" BorderBrush="Gray" BorderThickness="1" Padding="0 4 0 0"  Height="30" Margin="0 20 0 0" VerticalAlignment="Top" />
-                        <Button x:Name="ResetButton" FontWeight="Bold" Foreground="White" BorderBrush="Black" Content="RESET" VerticalAlignment="Bottom" Margin="0 30 0 0" Click="ResetButton_Click">
-                            <Button.Background>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FFADD2E2" Offset="0"/>
-                                    <GradientStop Color="#FF133D8F" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Button.Background>
-                        </Button>
+                        <Button x:Name="ResetButton" FontWeight="Bold"  Content="RESET" VerticalAlignment="Bottom" Margin="0 30 0 0" Click="ResetButton_Click" Style="{DynamicResource BlueButton}"/>
                     </StackPanel>
 
                 </Grid>

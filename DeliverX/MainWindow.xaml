@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DeliverX"
         mc:Ignorable="d"
         Icon="Images\deliverX_favicon.png"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="MainWindow" Height="720" Width="1280" MinHeight="360" MinWidth="640">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#4C0046FF" Offset="0"/>
@@ -36,15 +36,8 @@
 
                 <Label Content="© Łukasz Czepielik 2018" Foreground="#FFB7B7BF" FontWeight="Bold" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="432,0,0,-5"/>
                 <Label Content="Zalogowano:" Foreground="#FFB02E2E" FontWeight="Bold" Height="28" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" FontFamily="Ebrima" Margin="0,0,468,0" Width="88"/>
-                <Button x:Name="ZarzadzanieButton" Content="Zarządzanie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="10,45,0,0" Click="ZarzadzanieButton_Click" FontWeight="Bold" Foreground="White" BorderBrush="Black">
-                    <Button.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="Black" Offset="0"/>
-                            <GradientStop Color="#FFAFBACF" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
-                <Button x:Name="ObslugaButton" Content="Obsługa" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="10,15,0,0" Click="ObslugaButton_Click" FontWeight="Bold" BorderBrush="Black" Foreground="White">
+                <Button x:Name="ZarzadzanieButton" Content="Zarządzanie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="10,45,0,0" Click="ZarzadzanieButton_Click" FontWeight="Bold" Style="{DynamicResource BlackButton}"/>
+                <Button x:Name="ObslugaButton" Content="Obsługa" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="10,15,0,0" Click="ObslugaButton_Click" FontWeight="Bold" BorderBrush="Black" Foreground="White" Style="{DynamicResource BlackButton}">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="Black" Offset="0"/>
