@@ -13,38 +13,37 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DeliverX.Pages;
 
-
 namespace DeliverX
 {
     /// <summary>
-    /// Interaction logic for KlienciWindow.xaml
+    /// Interaction logic for PojazdyWindow.xaml
     /// </summary>
-    public partial class KlienciWindow : Window
+    public partial class PojazdyWindow : Window
     {
-        public KlienciWindow()
+        public PojazdyWindow()
         {
             InitializeComponent();
-            KlienciFrame.Content = new WindowLogoPage();
+            PojazdyFrame.Content = new WindowLogoPage();
         }
 
         private void SprawdzButton_Click(object sender, RoutedEventArgs e)
         {
-            KlienciFrame.Content = new KlienciSprawdzPage();
+            PojazdyFrame.Content = new PojazdySprawdzPage();
         }
 
         private void AktualizujButton_Click(object sender, RoutedEventArgs e)
         {
-            KlienciFrame.Content = new KlienciAktualizujPage();
+            PojazdyFrame.Content = new PojazdyAktualizujPage();
         }
 
         private void DodajButton_Click(object sender, RoutedEventArgs e)
         {
-            KlienciFrame.Content = new KlienciDodajPage();
+            PojazdyFrame.Content = new PojazdyDodajPage();
         }
 
         private void UsunButton_Click(object sender, RoutedEventArgs e)
         {
-            KlienciFrame.Content = new KlienciUsunPage();
+            PojazdyFrame.Content = new PojazdyUsunPage();
         }
     }
 }

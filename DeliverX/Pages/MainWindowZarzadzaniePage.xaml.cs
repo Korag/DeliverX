@@ -18,16 +18,17 @@ namespace DeliverX.Pages
     /// <summary>
     /// Interaction logic for Zarzadzanie.xaml
     /// </summary>
-    public partial class Zarzadzanie : Page
+    public partial class MainWindowZarzadzaniePage : Page
     {
-        public Zarzadzanie()
+        public MainWindowZarzadzaniePage()
         {
             InitializeComponent();
         }
 
         private void PojazdyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            PojazdyWindow PojazdyWindow = new PojazdyWindow();
+            PojazdyWindow.Show();
         }
 
         private void TypyPojazdowButton_Click(object sender, RoutedEventArgs e)
@@ -79,7 +80,8 @@ namespace DeliverX.Pages
 
         private void UprawnieniaPracownikowButton_Click(object sender, RoutedEventArgs e)
         {
-
+            UprawnieniaWindow UprawnieniaWindow = new UprawnieniaWindow();
+            UprawnieniaWindow.Show();
         }
     }
 }

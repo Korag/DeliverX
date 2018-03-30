@@ -1,0 +1,35 @@
+﻿<Page x:Class="DeliverX.Pages.PojazdyDodajPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeliverX.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="190" d:DesignWidth="536"
+      Title="PojazdyDodajPage">
+
+    <Grid>
+        <TextBox x:Name="MarkaTextBox" HorizontalAlignment="Left" Height="22" Margin="130,23,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="ModelTextBox" HorizontalAlignment="Left" Height="22" Margin="130,53,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="NrRejestracyjnyTextBox" Height="22" Margin="387,23,13,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <ComboBox x:Name="TypPojazduComboBox" Margin="387,53,13,115" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <TextBox x:Name="MaxLadownoscTextBox" HorizontalAlignment="Left" Height="22" Margin="130,143,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="JednostkaLadownosciTextBox" HorizontalAlignment="Left" Height="22" Margin="230,143,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="RocznikTextBox" Height="22" Margin="387,83,13,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="StanLicznikaTextBox" HorizontalAlignment="Left" Height="22" Margin="130,113,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="JednostkaLicznikaTextBox" Height="22" Margin="230,113,269,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="StanLicznikaDataTextBox" HorizontalAlignment="Left" Height="22" Margin="130,83,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <ComboBox x:Name="RodzajPaliwaComboBox" Margin="387,113,13,55" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="MarkaLabel" Content="Marka:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="116" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="14,23,0,0"/>
+        <Label x:Name="ModelLabel" Content="Model:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="116" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="14,53,0,0"/>
+        <Label x:Name="NrRejestracyjnyLabel" Content="Numer rejestracyjny:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="110" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="277,23,0,0"/>
+        <Label x:Name="TypPojazduLabel" Content="Typ pojazdu:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="110" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="277,53,0,0" RenderTransformOrigin="0.407,0.5"/>
+        <Label x:Name="MaxLadownoscLabel" Content="Maksymalna ładowność:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="116" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="14,143,0,0"/>
+        <Label x:Name="RocznikLabel" Content="Rocznik:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="110" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="277,83,0,0"/>
+        <Label x:Name="StanLicznikaLabel" Content="Stan licznika:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="116" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="14,113,0,0"/>
+        <Label x:Name="StanLicznikaDataLabel" Content="Data spisania licznika:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="116" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="14,83,0,0" RenderTransformOrigin="0.188,0.136"/>
+        <Label x:Name="RodzajPaliwaLabel" Content="Rodzaj paliwa:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="110" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="277,113,0,0"/>
+        <Button x:Name="DodajButton" Content="Dodaj" Click="DodajButton_Click" FontWeight="Bold" Margin="0,143,149,25" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="86"/>
+        <Button x:Name="ResetButton" Content="RESET" Click="ResetButton_Click" FontWeight="Bold" Margin="0,143,37,25" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="86" RenderTransformOrigin="0.502,-0.375"/>
+    </Grid>
+</Page>

@@ -38,7 +38,7 @@ namespace DeliverX
         public MainWindow()
         {
             InitializeComponent();
-            ContentFrame.Content = new Logo();
+            ContentFrame.Content = new WindowLogoPage();
 
 
             var handle = NativeMethods.GetConsoleWindow();
@@ -65,21 +65,25 @@ namespace DeliverX
 
         private void ObslugaButton_Click(object sender, RoutedEventArgs e)
         {
-            ContentFrame.Content = new Obsluga();
+            ContentFrame.Content = new MainWindowObslugaPage();
         }
 
         private void ZarzadzanieButton_Click(object sender, RoutedEventArgs e)
         {
-            ContentFrame.Content = new Zarzadzanie();
+            ContentFrame.Content = new MainWindowZarzadzaniePage();
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
+            for (int intCounter = App.Current.Windows.Count - 1; intCounter > 1; intCounter--)
+            {
+                App.Current.Windows[intCounter].Close();
+            }
+
             LoginWindow LoginWindow = new LoginWindow();
             LoginWindow.Show();
 
-            //for (int intCounter = App.Current.Windows.Count - 2; intCounter > 0; intCounter--)
-            //    App.Current.Windows[intCounter].Close();
+            this.Close();
         }
     }
 }

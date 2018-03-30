@@ -8,7 +8,35 @@
       d:DesignHeight="190" d:DesignWidth="536"
       Title="PracownicySprawdzPage">
 
-    <Grid>
-        
+    <ScrollViewer HorizontalAlignment="Left" Height="190" Margin="0,0,0,0" VerticalAlignment="Top" Width="536" CanContentScroll="true">
+    <Grid Height="320" HorizontalAlignment="Left" Width="536">
+        <Label x:Name="ListujLabel" Content="Wybierz pracownika:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="98" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,10,0,0"/>
+        <ComboBox x:Name="ListujComboBox" Margin="108,10,270,288" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <TextBox x:Name="PESELTextBox" HorizontalAlignment="Left" Height="22" Margin="128,45,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="DataUrodzeniaTextBox" HorizontalAlignment="Left" Height="22" Margin="128,75,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="DataZatrudnieniaTextBox" HorizontalAlignment="Left" Height="22" Margin="128,105,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="PanstwoTextBox" HorizontalAlignment="Left" Height="22" Margin="128,135,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="MiastoTextBox" HorizontalAlignment="Left" Height="22" Margin="128,165,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="KodPocztowyTextBox" HorizontalAlignment="Left" Height="22" Margin="376,45,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="UlicaTextBox" Height="22" Margin="376,75,38,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="NrDomuTextBox" HorizontalAlignment="Left" Height="22" Margin="376,105,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="TelefonTextBox" Height="22" Margin="376,135,38,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Height="22" Margin="376,165,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <Label x:Name="PESELLabel" Content="PESEL:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="40,45,0,0"/>
+        <Label x:Name="DataUrodzeniaLabel" Content="Data urodzenia:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="40,75,0,0"/>
+        <Label x:Name="DataZatrudnieniaLabel" Content="Data zatrudnienia:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="40,105,0,0"/>
+        <Label x:Name="PanstwoLabel" Content="Państwo:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="40,135,0,0"/>
+        <Label x:Name="MiastoLabel" Content="Miasto:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="40,165,0,0"/>
+        <Label x:Name="KodPocztowyLabel" Content="Kod pocztowy:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="288,45,0,0"/>
+        <Label x:Name="UlicaLabel" Content="Ulica:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="288,75,0,0"/>
+        <Label x:Name="NrDomuLabel" Content="Numer domu:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="288,105,0,0"/>
+        <Label x:Name="TelefonLabel" Content="Telefon:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="288,135,0,0"/>
+        <Label x:Name="EmailLabel" Content="Email:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="288,165,0,0" RenderTransformOrigin="0.188,0.136"/>
+        <Label x:Name="UprawnieniaSekcjaLabel" Content="Uprawnienia:" Padding="20 2 0 0" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="219,216,219,82"/>
+        <Label x:Name="UprawnieniaLabel" Content="Wybierz typ pojazdu:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="98" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="139,248,0,0"/>
+        <ComboBox x:Name="UprawnieniaPojazdComboBox" Margin="237,248,141,50" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="NrDokumentuLabel" Content="Numer dokumentu:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="98" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="139,280,0,0"/>
+        <TextBox x:Name="NrDokumentuTextBox" HorizontalAlignment="Left" Height="22" Margin="237,280,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
     </Grid>
+    </ScrollViewer>
 </Page>

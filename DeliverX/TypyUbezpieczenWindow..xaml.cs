@@ -33,5 +33,15 @@ namespace DeliverX
         {
 
         }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AktualizujButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

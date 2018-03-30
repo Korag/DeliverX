@@ -23,7 +23,7 @@ namespace DeliverX
         public FirmyUbezpieczenioweWindow()
         {
             InitializeComponent();
-            FirmyUbezpieczenioweFrame.Content = new Logo();
+            FirmyUbezpieczenioweFrame.Content = new WindowLogoPage();
         }
 
         private void SprawdzButton_Click(object sender, RoutedEventArgs e)

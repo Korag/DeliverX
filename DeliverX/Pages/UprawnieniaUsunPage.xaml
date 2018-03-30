@@ -1,0 +1,20 @@
+﻿<Page x:Class="DeliverX.Pages.UprawnieniaUsunPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeliverX.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="190" d:DesignWidth="536"
+      Title="UprawnieniaUsunPage">
+
+    <Grid>
+        <Label x:Name="UsunPracownikLabel" Content="Wybierz pracownika:" HorizontalAlignment="Left" Height="28" Margin="49,41,0,0" VerticalAlignment="Top" Width="128" Style="{DynamicResource BlackLabel}"/>
+        <ComboBox x:Name="UsunPracownikComboBox" Margin="177,41,153,121" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="UsunUprawnienieLabel" Content="Wybierz uprawnienie:" HorizontalAlignment="Left" Height="28" Margin="49,90,0,0" VerticalAlignment="Top" Width="128" Style="{DynamicResource BlackLabel}"/>
+        <ComboBox x:Name="UsunUprawnienieComboBox" Margin="177,90,153,72" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}" IsEnabled="false"/>
+        <Label x:Name="NrDokumentuLabel" Content="Numer dokumentu:" HorizontalAlignment="Left" Height="28" Margin="49,127,0,0" VerticalAlignment="Top" Width="128" Style="{DynamicResource BlackLabel}"/>
+        <TextBox x:Name="NrDokumentuTextBox" HorizontalAlignment="Left" Height="28" Margin="177,127,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <Button x:Name="UsunButton" Content="Usuń" Click="UsunButton_Click" FontWeight="Bold" Margin="0,127,24,35" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="100"/>
+    </Grid>
+</Page>

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace DeliverX.Pages
 {
     /// <summary>
-    /// Interaction logic for Logo.xaml
+    /// Interaction logic for PojazdySprawdzPage.xaml
     /// </summary>
-    public partial class Logo : Page
+    public partial class PojazdySprawdzPage : Page
     {
-        public Logo()
+        public PojazdySprawdzPage()
         {
             InitializeComponent();
         }

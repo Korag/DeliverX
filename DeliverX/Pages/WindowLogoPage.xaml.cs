@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace DeliverX.Pages
 {
     /// <summary>
-    /// Interaction logic for KlienciAktualizujPage.xaml
+    /// Interaction logic for Logo.xaml
     /// </summary>
-    public partial class KlienciAktualizujPage : Page
+    public partial class WindowLogoPage : Page
     {
-        public KlienciAktualizujPage()
+        public WindowLogoPage()
         {
             InitializeComponent();
-        }
-
-        private void AktualizujButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

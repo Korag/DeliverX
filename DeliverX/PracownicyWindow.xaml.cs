@@ -23,7 +23,7 @@ namespace DeliverX
         public PracownicyWindow()
         {
             InitializeComponent();
-            PracownicyFrame.Content = new Logo();
+            PracownicyFrame.Content = new WindowLogoPage();
         }
 
         private void SprawdzButton_Click(object sender, RoutedEventArgs e)

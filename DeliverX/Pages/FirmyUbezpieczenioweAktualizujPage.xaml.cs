@@ -29,5 +29,10 @@ namespace DeliverX.Pages
         {
 
         }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

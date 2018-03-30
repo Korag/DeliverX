@@ -1,0 +1,16 @@
+﻿<Page x:Class="DeliverX.Pages.PojazdyUsunPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeliverX.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="190" d:DesignWidth="536"
+      Title="PojazdyUsunPage">
+
+    <Grid>
+        <Label x:Name="UsunLabel" Content="Wybierz pojazd:" HorizontalAlignment="Left" Height="28" Margin="53,80,0,0" VerticalAlignment="Top" Width="124" Style="{DynamicResource BlackLabel}"/>
+        <ComboBox x:Name="UsunComboBox" Margin="177,80,153,82" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Button x:Name="UsunButton" Content="Usuń" Click="UsunButton_Click" FontWeight="Bold" Margin="0,80,53,82" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="100"/>
+    </Grid>
+</Page>

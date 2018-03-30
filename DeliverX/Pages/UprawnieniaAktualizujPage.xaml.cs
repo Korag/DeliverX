@@ -16,32 +16,21 @@ using System.Windows.Shapes;
 namespace DeliverX.Pages
 {
     /// <summary>
-    /// Interaction logic for Obsluga.xaml
+    /// Interaction logic for UprawnieniaAktualizujPage.xaml
     /// </summary>
-    public partial class Obsluga : Page
+    public partial class UprawnieniaAktualizujPage : Page
     {
-        public Obsluga()
+        public UprawnieniaAktualizujPage()
         {
             InitializeComponent();
         }
 
-        private void PrzesylkaButton_Click(object sender, RoutedEventArgs e)
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void KursyButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void KlienciButton_Click(object sender, RoutedEventArgs e)
-        {
-            KlienciWindow KlienciWindow = new KlienciWindow();
-            KlienciWindow.Show();
-        }
-
-        private void StatusyPrzesylekButton_Click(object sender, RoutedEventArgs e)
+        private void DodajButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

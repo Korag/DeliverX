@@ -10,36 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DeliverX
+namespace DeliverX.Pages
 {
     /// <summary>
-    /// Interaction logic for TypyPojazdowWindow.xaml
+    /// Interaction logic for PojazdyUsunPage.xaml
     /// </summary>
-    public partial class TypyPojazdowWindow : Window
+    public partial class PojazdyUsunPage : Page
     {
-        public TypyPojazdowWindow()
+        public PojazdyUsunPage()
         {
             InitializeComponent();
         }
 
-        private void DodajButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void UsunButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AktualizujButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

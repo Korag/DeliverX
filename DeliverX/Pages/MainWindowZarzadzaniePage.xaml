@@ -1,4 +1,4 @@
-﻿<Page x:Class="DeliverX.Pages.Zarzadzanie"
+﻿<Page x:Class="DeliverX.Pages.MainWindowZarzadzaniePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:DeliverX.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="190" d:DesignWidth="536"
-      Title="Zarzadzanie">
+      Title="MainWindowZarzadzaniePage">
 
     <Grid>
         <Image x:Name="image" HorizontalAlignment="Center" Height="61" Margin="10,10,370,119" VerticalAlignment="Center" Width="156" Source="/DeliverX;component/Images/deliverX_transparent.png" RenderTransformOrigin="0.5,0.5" Opacity="0.3"/>

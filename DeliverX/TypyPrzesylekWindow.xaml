@@ -29,18 +29,27 @@
                             <GradientStop Color="#FFB0B0B0" Offset="1"/>
                         </LinearGradientBrush>
                     </Grid.Background>
-                    <Label x:Name="DostepneLabel" Content="Dostępne typy przesyłek:" Height="28" Margin="116,18,270,0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}"/>
-                    <Label x:Name="DodajLabel" Content="Dodawanie nowego typu przesyłek:" HorizontalAlignment="Left" Height="28" Margin="10,67,0,0" VerticalAlignment="Top" Width="209" Style="{DynamicResource BlackLabel}"/>
-                    <Button x:Name="DodajButton" Content="Dodaj typ" HorizontalAlignment="Left" Width="100" Click="DodajButton_Click" FontWeight="Bold" Margin="425,67,0,95" Style="{DynamicResource BlueButton}"/>
-                    <TextBox x:Name="DodajTextBox" HorizontalAlignment="Left" Height="28" Margin="219,67,0,0" Padding="0 5 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" Style="{DynamicResource BlueTextBox}"/>
-                    <Label x:Name="UsunLabel" Content="Usuwanie wybranego typu przesyłek:" HorizontalAlignment="Left" Height="28" Margin="10,100,0,0" VerticalAlignment="Top" Width="209" Style="{DynamicResource BlackLabel}"/>
-                    <Button x:Name="UsunButton" Content="Usuń typ" HorizontalAlignment="Left" Width="100" Click="UsunButton_Click" FontWeight="Bold" Margin="425,100,0,62" Style="{DynamicResource BlueButton}"/>
-                    <ComboBox x:Name="UsunComboBox" Height="28" Margin="266,18,116,0" VerticalAlignment="Top" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
-                    <ComboBox x:Name="DostepneComboBox"  Height="28" Margin="219,100,111,0" VerticalAlignment="Top" BorderBrush="Black"   Template="{DynamicResource BlueComboBox}"/>
-                    <Label x:Name="AktualizujLabel" Content="Wybierz typ aktualizowany:" Height="28" Margin="10,153,371,0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}"/>
-                    <Label x:Name="AktualizujNowaLabel" Content="Nowa nazwa:" Height="28" Margin="297,153,155,0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}"/>
-                    <ComboBox x:Name="AktualizujComboBox"  Height="28" Margin="165,153,257,0" VerticalAlignment="Top" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
-                    <TextBox x:Name="AktualizujTextBox" HorizontalAlignment="Left" Height="28" Margin="381,153,0,0" Padding="0 5 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Style="{DynamicResource BlueTextBox}"/>
+                    <Label x:Name="DostepneLabel" Content="Dostępne typy przesyłek:" Height="28" Margin="116,10,270,0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}"/>
+                    <Label x:Name="DodajLabel" Content="Dodawanie nowego typu przesyłki:" HorizontalAlignment="Left" Height="28" Margin="10,48,0,0" VerticalAlignment="Top" Width="209" Style="{DynamicResource BlackLabel}"/>
+                    <Button x:Name="DodajButton" Content="Dodaj typ" HorizontalAlignment="Left" Width="100" Click="DodajButton_Click" FontWeight="Bold" Margin="425,48,0,114" Style="{DynamicResource BlueButton}"/>
+                    <TextBox x:Name="DodajTextBox" HorizontalAlignment="Left" Height="28" Margin="219,48,0,0" Padding="0 5 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" BorderBrush="Black" Style="{DynamicResource BlueTextBox}">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="White" Offset="0"/>
+                                <GradientStop Color="#FF86C8FF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <Label x:Name="UsunLabel" Content="Usuwanie wybranego typu przesyłki:" HorizontalAlignment="Left" Height="28" Margin="10,81,0,0" VerticalAlignment="Top" Width="209" Style="{DynamicResource BlackLabel}"/>
+                    <Button x:Name="UsunButton" Content="Usuń typ" HorizontalAlignment="Left" Width="100" Click="UsunButton_Click" FontWeight="Bold" Margin="425,81,0,81" Style="{DynamicResource BlueButton}"/>
+                    <ComboBox x:Name="DostepneComboBox" Height="28" Margin="266,10,116,0" VerticalAlignment="Top" BorderBrush="Black" Template="{DynamicResource BlueComboBox}"/>
+                    <ComboBox x:Name="UsunComboBox"  Height="28" Margin="219,81,111,0" VerticalAlignment="Top" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+                    <Label x:Name="AktualizujLabel" Content="Wybierz typ aktualizowany:" Height="28" Margin="10,122,371,0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}"/>
+                    <Label x:Name="AktualizujNowaLabel" Content="Nowa nazwa:" Height="28" Margin="315,122,136,0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}"/>
+                    <ComboBox x:Name="AktualizujComboBox"  Height="28" Margin="165,122,226,0" VerticalAlignment="Top" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+                    <TextBox x:Name="AktualizujTextBox" HorizontalAlignment="Left" Height="28" Margin="400,122,0,0" Padding="0 5 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" Style="{DynamicResource BlueTextBox}"/>
+                    <Button x:Name="AktualizujButton" Content="Aktualizuj" HorizontalAlignment="Left" Width="100" Click="AktualizujButton_Click" FontWeight="Bold" Margin="160,160,0,10" Style="{DynamicResource BlueButton}"/>
+                    <Button x:Name="ResetButton" Content="RESET" Click="ResetButton_Click" FontWeight="Bold" Margin="276,160,160,10" Style="{DynamicResource BlueButton}"/>
                 </Grid>
                 <Image Height="67" VerticalAlignment="Top" Source="Images/deliverX_transparent.png" Margin="183,3,183,0" Opacity="0.5"/>
                 <Label Content="© Łukasz Czepielik 2018" Foreground="#FFB7B7BF" FontWeight="Bold" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="432,0,0,-5"/>

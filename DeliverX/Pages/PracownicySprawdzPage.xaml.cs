@@ -24,5 +24,7 @@ namespace DeliverX.Pages
         {
             InitializeComponent();
         }
+
+     
     }
 }
