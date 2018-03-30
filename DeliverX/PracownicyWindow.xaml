@@ -1,0 +1,43 @@
+﻿<Window x:Class="DeliverX.PracownicyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DeliverX"
+        mc:Ignorable="d"
+        Icon="Images\deliverX_favicon.png"
+        Title="PracownicyWindow" Height="720" Width="1280" MinHeight="360" MinWidth="640">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#4C0046FF" Offset="0"/>
+            <GradientStop Color="#FFF3F3F3" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Viewbox StretchDirection="Both" Stretch="Uniform">
+        <Border Margin="5 2 5 0">
+            <Grid Width="556" Height="295">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FF272C49" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Button x:Name="DodajButton" Content="Dodaj pracownika" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Margin="373,10,0,0"  FontWeight="Bold" Style="{DynamicResource BlackButton}" Click="DodajButton_Click"/>
+                <Button x:Name="AktualizujButton" Content="Zaaktualizuj dane pracownika" VerticalAlignment="Top" Margin="10,35,371,0"  FontWeight="Bold" Style="{DynamicResource BlackButton}" Click="AktualizujButton_Click"/>
+                <Button x:Name="SprawdzButton" Content="Sprawdź dane pracownika" HorizontalAlignment="Left" VerticalAlignment="Top" Width="173" Margin="10,10,0,0" FontWeight="Bold" Style="{DynamicResource BlackButton}" Click="SprawdzButton_Click"/>
+                <Button x:Name="UsunButton" Content="Usuń pracownika" VerticalAlignment="Top" Margin="373,35,10,0"  FontWeight="Bold" Style="{DynamicResource BlackButton}" Click="UsunButton_Click"/>
+                <Grid Margin="10,75,10,30">
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="White" Offset="0"/>
+                            <GradientStop Color="#FFB0B0B0" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Frame x:Name="PracownicyFrame" HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="536" NavigationUIVisibility="Hidden"/>
+                </Grid>
+                <Image Height="67" VerticalAlignment="Top" Source="Images/deliverX_transparent.png" Margin="183,3,183,0" Opacity="0.5"/>
+                <Label Content="© Łukasz Czepielik 2018" Foreground="#FFB7B7BF" FontWeight="Bold" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" FontFamily="Tw Cen MT Condensed Extra Bold" Margin="432,0,0,-5"/>
+            </Grid>
+        </Border>
+    </Viewbox>
+</Window>

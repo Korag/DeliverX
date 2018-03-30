@@ -37,7 +37,8 @@ namespace DeliverX.Pages
 
         private void KlienciButton_Click(object sender, RoutedEventArgs e)
         {
-
+            KlienciWindow KlienciWindow = new KlienciWindow();
+            KlienciWindow.Show();
         }
 
         private void StatusyPrzesylekButton_Click(object sender, RoutedEventArgs e)

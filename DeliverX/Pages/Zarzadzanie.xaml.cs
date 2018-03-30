@@ -41,9 +41,10 @@ namespace DeliverX.Pages
 
         }
 
-        private void FirmyUbezpieczenioButton_Click(object sender, RoutedEventArgs e)
+        private void FirmyUbezpieczenioweButton_Click(object sender, RoutedEventArgs e)
         {
-
+            FirmyUbezpieczenioweWindow FirmyUbezpieczenioweWindow = new FirmyUbezpieczenioweWindow();
+            FirmyUbezpieczenioweWindow.Show();
         }
 
         private void TypyUbezpieczenButton_Click(object sender, RoutedEventArgs e)
@@ -72,7 +73,8 @@ namespace DeliverX.Pages
 
         private void PracownicyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            PracownicyWindow PracownicyWindow = new PracownicyWindow();
+            PracownicyWindow.Show();
         }
 
         private void UprawnieniaPracownikowButton_Click(object sender, RoutedEventArgs e)

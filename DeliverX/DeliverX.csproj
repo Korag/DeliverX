@@ -70,11 +70,17 @@
     <Compile Include="Firma_Ubezpieczeniowa.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FirmyUbezpieczenioweWindow.xaml.cs">
+      <DependentUpon>FirmyUbezpieczenioweWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Historia.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Historia_widok.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KlienciWindow.xaml.cs">
+      <DependentUpon>KlienciWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Klient.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -90,11 +96,47 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Pages\FirmyUbezpieczenioweAktualizujPage.xaml.cs">
+      <DependentUpon>FirmyUbezpieczenioweAktualizujPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FirmyUbezpieczenioweDodajPage.xaml.cs">
+      <DependentUpon>FirmyUbezpieczenioweDodajPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FirmyUbezpieczenioweSprawdzPage.xaml.cs">
+      <DependentUpon>FirmyUbezpieczenioweSprawdzPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FirmyUbezpieczenioweUsunPage.xaml.cs">
+      <DependentUpon>FirmyUbezpieczenioweUsunPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KlienciAktualizujPage.xaml.cs">
+      <DependentUpon>KlienciAktualizujPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KlienciDodajPage.xaml.cs">
+      <DependentUpon>KlienciDodajPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KlienciSprawdzPage.xaml.cs">
+      <DependentUpon>KlienciSprawdzPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KlienciUsunPage.xaml.cs">
+      <DependentUpon>KlienciUsunPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Logo.xaml.cs">
       <DependentUpon>Logo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Obsluga.xaml.cs">
       <DependentUpon>Obsluga.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PracownicyAktualizujPage.xaml.cs">
+      <DependentUpon>PracownicyAktualizujPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PracownicyDodajPage.xaml.cs">
+      <DependentUpon>PracownicyDodajPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PracownicySprawdzPage.xaml.cs">
+      <DependentUpon>PracownicySprawdzPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PracownicyUsunPage.xaml.cs">
+      <DependentUpon>PracownicyUsunPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Zarzadzanie.xaml.cs">
       <DependentUpon>Zarzadzanie.xaml</DependentUpon>
@@ -104,6 +146,9 @@
     </Compile>
     <Compile Include="Pojazd_widok.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PracownicyWindow.xaml.cs">
+      <DependentUpon>PracownicyWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pracownik.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -159,6 +204,14 @@
     <Compile Include="Uprawnienie_widok.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Page Include="FirmyUbezpieczenioweWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KlienciWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,6 +228,38 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\FirmyUbezpieczenioweAktualizujPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FirmyUbezpieczenioweDodajPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FirmyUbezpieczenioweSprawdzPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FirmyUbezpieczenioweUsunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\KlienciAktualizujPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\KlienciDodajPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\KlienciSprawdzPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\KlienciUsunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Logo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -183,7 +268,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PracownicyAktualizujPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PracownicyDodajPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PracownicySprawdzPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PracownicyUsunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Zarzadzanie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PracownicyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

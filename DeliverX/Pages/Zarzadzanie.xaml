@@ -29,7 +29,7 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <Button x:Name="UbezpieczeniaPojazdowButton" Content="Ubezpieczenia pojazdów" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Click="UbezpieczeniaPojazdowButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
-            <Button x:Name="FirmyUbezpieczenioweButton" Content="Firmy ubezpieczeniowe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,42,0,0" Click="FirmyUbezpieczenioButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="FirmyUbezpieczenioweButton" Content="Firmy ubezpieczeniowe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,42,0,0" Click="FirmyUbezpieczenioweButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
             <Button x:Name="TypUbezpieczenButton" Content="Typy ubezpieczeń" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Margin="0,83,0,0" Click="TypyUbezpieczenButton_Click" FontWeight="Bold" Style="{DynamicResource BlueButton}"/>
         </Grid>
 
