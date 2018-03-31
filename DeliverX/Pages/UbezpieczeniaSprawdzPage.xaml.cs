@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace DeliverX.Pages
 {
     /// <summary>
-    /// Interaction logic for PojazdyAktualizujPage.xaml
+    /// Interaction logic for UbezpieczeniaSprawdzPage.xaml
     /// </summary>
-    public partial class PojazdyAktualizujPage : Page
+    public partial class UbezpieczeniaSprawdzPage : Page
     {
-        public PojazdyAktualizujPage()
+        public UbezpieczeniaSprawdzPage()
         {
             InitializeComponent();
-        }
-
-        private void AktualizujButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

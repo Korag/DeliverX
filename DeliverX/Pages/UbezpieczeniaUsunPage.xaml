@@ -1,0 +1,20 @@
+﻿<Page x:Class="DeliverX.Pages.UbezpieczeniaUsunPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeliverX.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="190" d:DesignWidth="536"
+      Title="UbezpieczeniaUsunPage">
+
+    <Grid>
+        <Label x:Name="UsunPojazdLabel" Content="Wybierz pojazd:" HorizontalAlignment="Left" Height="28" Margin="42,41,0,0" VerticalAlignment="Top" Width="135" Style="{DynamicResource BlackLabel}"/>
+        <ComboBox x:Name="UsunPojazdComboBox" Margin="177,41,153,121" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="UsunUbezpieczenieLabel" Content="Wybierz ubezpieczenie:" HorizontalAlignment="Left" Height="28" Margin="42,90,0,0" VerticalAlignment="Top" Width="135" Style="{DynamicResource BlackLabel}"/>
+        <ComboBox x:Name="UsunUbezpieczenieComboBox" Margin="177,90,153,72" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}" IsEnabled="false"/>
+        <Label x:Name="NrPolisyLabel" Content="Numer polisy:" HorizontalAlignment="Left" Height="28" Margin="42,127,0,0" VerticalAlignment="Top" Width="135" Style="{DynamicResource BlackLabel}"/>
+        <TextBox x:Name="NrPolisyTextBox" HorizontalAlignment="Left" Height="28" Margin="177,127,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <Button x:Name="UsunButton" Content="Usuń" Click="UsunButton_Click" FontWeight="Bold" Margin="0,127,24,35" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="100"/>
+    </Grid>
+</Page>

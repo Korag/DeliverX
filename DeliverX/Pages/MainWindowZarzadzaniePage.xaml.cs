@@ -39,7 +39,8 @@ namespace DeliverX.Pages
 
         private void UbezpieczeniaPojazdowButton_Click(object sender, RoutedEventArgs e)
         {
-
+            UbezpieczeniaWindow UbezpieczeniaWindow = new UbezpieczeniaWindow();
+            UbezpieczeniaWindow.Show();
         }
 
         private void FirmyUbezpieczenioweButton_Click(object sender, RoutedEventArgs e)

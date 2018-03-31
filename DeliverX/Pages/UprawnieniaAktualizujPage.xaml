@@ -18,7 +18,7 @@
         <Label x:Name="NrDokumentuNoweLabel" Content="Nowe:" Height="28" Margin="378,109,92,0" Padding="15 4 0 0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}"/>
         <TextBox x:Name="NrDokumentuTextBox" HorizontalAlignment="Left"  Height="28" Margin="49,142,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
         <Button x:Name="AktualizujButton" Content="Aktualizuj" Click="DodajButton_Click" FontWeight="Bold" Margin="0,10,24,152" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="100"/>
-        <TextBox x:Name="NrDokumentuTextBox_Nowe" HorizontalAlignment="Left" Height="28" Margin="332,142,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="NrDokumentuTextBox_Nowe" HorizontalAlignment="Left" Height="28" Margin="332,142,0,0" Padding="0 4 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
         <Button x:Name="ResetButton" Content="RESET" Click="ResetButton_Click" FontWeight="Bold" Margin="0,59,24,103" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="100"/>
     </Grid>
 </Page>

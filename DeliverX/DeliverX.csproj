@@ -132,6 +132,18 @@
     <Compile Include="Pages\PojazdyUsunPage.xaml.cs">
       <DependentUpon>PojazdyUsunPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\UbezpieczeniaAktualizujPage.xaml.cs">
+      <DependentUpon>UbezpieczeniaAktualizujPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UbezpieczeniaDodajPage.xaml.cs">
+      <DependentUpon>UbezpieczeniaDodajPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UbezpieczeniaSprawdzPage.xaml.cs">
+      <DependentUpon>UbezpieczeniaSprawdzPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UbezpieczeniaUsunPage.xaml.cs">
+      <DependentUpon>UbezpieczeniaUsunPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\UprawnieniaAktualizujPage.xaml.cs">
       <DependentUpon>UprawnieniaAktualizujPage.xaml</DependentUpon>
     </Compile>
@@ -218,6 +230,9 @@
     </Compile>
     <Compile Include="Typ_Ubezpieczenia.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UbezpieczeniaWindow.xaml.cs">
+      <DependentUpon>UbezpieczeniaWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ubezpieczenie.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -306,6 +321,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\UbezpieczeniaAktualizujPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UbezpieczeniaDodajPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UbezpieczeniaSprawdzPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\UbezpieczeniaUsunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\UprawnieniaAktualizujPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -375,6 +406,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TypyUbezpieczenWindow..xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UbezpieczeniaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

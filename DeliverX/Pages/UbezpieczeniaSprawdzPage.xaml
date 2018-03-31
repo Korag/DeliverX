@@ -1,0 +1,28 @@
+﻿<Page x:Class="DeliverX.Pages.UbezpieczeniaSprawdzPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeliverX.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="190" d:DesignWidth="536"
+      Title="UbezpieczeniaSprawdzPage">
+
+    <Grid>
+        <Label x:Name="ListujPojazdLabel" Content="Wybierz pojazd:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="111" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,10,0,0"/>
+        <ComboBox x:Name="ListujPojazdComboBox" Margin="121,10,257,158" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="ListujUbezpieczenieLabel" Content="Wybierz ubezpieczenie:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="111" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,39,0,0"/>
+        <ComboBox x:Name="ListujUbezpieczenieComboBox" Margin="121,39,257,129" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}" IsEnabled="False"/>
+        <Label x:Name="FirmaLabel" Content="Firma:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="111" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="26,80,0,0"/>
+        <Label x:Name="NrPolisyLabel" Content="Numer polisy:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="111" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="26,110,0,0"/>
+        <Label x:Name="CenaLabel" Content="Cena:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="111" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="26,140,0,0"/>
+        <Label x:Name="ObowiazujeOdLabel" Content="Obowiązuje od:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="112" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="276,80,0,0"/>
+        <Label x:Name="ObowiazujeDoLabel" Content="Obowiązuje do:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="112" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="276,110,0,0"/>
+        <TextBox x:Name="FirmaTextBox" HorizontalAlignment="Left" Height="22" Margin="137,80,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="NrPolisyTextBox" HorizontalAlignment="Left" Height="22" Margin="137,110,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="CenaTextBox" HorizontalAlignment="Left" Height="22" Margin="137,140,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="JednostkaCenaTextBox" HorizontalAlignment="Left" Height="22" Margin="222,140,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="ObowiazujeOdTextBox" Height="22" Margin="388,80,26,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <TextBox x:Name="ObowiazujeDoTextBox" HorizontalAlignment="Left" Height="22" Margin="388,110,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+    </Grid>
+</Page>
