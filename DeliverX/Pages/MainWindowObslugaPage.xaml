@@ -19,44 +19,28 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Grid HorizontalAlignment="Left" Margin="307,20,0,100" Width="200">
+        <Grid HorizontalAlignment="Left" Margin="307,0,0,0" Width="200">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF204168" Offset="0"/>
-                    <GradientStop Color="white" Offset="1"/>
+                    <GradientStop Color="#FF6BA2E4" Offset="0"/>
+                    <GradientStop Color="#FF69A3E4" Offset="1"/>
+                    <GradientStop Color="WhiteSmoke" Offset="0.437"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Button x:Name="KursyButton" Content="Kursy" HorizontalAlignment="Left" Width="200" Click="KursyButton_Click" FontWeight="Bold" Margin="0,24,0,25" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="KursyButton" Content="Kursy" HorizontalAlignment="Left" Width="200" Click="KursyButton_Click" FontWeight="Bold" Margin="0,32,0,117" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="KlienciButton" Content="Klienci" HorizontalAlignment="Left" Width="200" Click="KlienciButton_Click" FontWeight="Bold" Margin="0,118,0,32" Style="{DynamicResource BlueButton}"/>
         </Grid>
 
-        <Grid Margin="29,20,307,101">
+        <Grid Margin="29,0,307,0">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF204168" Offset="0"/>
-                    <GradientStop Color="white" Offset="1"/>
+                    <GradientStop Color="#FF6BA2E4" Offset="0"/>
+                    <GradientStop Color="#FF69A3E4" Offset="1"/>
+                    <GradientStop Color="WhiteSmoke" Offset="0.437"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Button x:Name="PrzesylkiButton" Content="Przesyłki" HorizontalAlignment="Left" Width="200" Click="PrzesylkaButton_Click" FontWeight="Bold"  Margin="0,24,0,25" Style="{DynamicResource BlueButton}"/>
-        </Grid>
-
-        <Grid HorizontalAlignment="Left" Margin="29,102,0,20" Width="200">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
-                    <GradientStop Color="#FF204168" Offset="0"/>
-                    <GradientStop Color="white" Offset="1"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-            <Button x:Name="StatusyPrzesylekButton" Content="Statusy przesyłek" HorizontalAlignment="Left" Width="200" Click="StatusyPrzesylekButton_Click" FontWeight="Bold"  Margin="0,24,0,25" Style="{DynamicResource BlueButton}"/>
-        </Grid>
-
-        <Grid Margin="0,102,29,18" HorizontalAlignment="Right" Width="200">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
-                    <GradientStop Color="#FF204168" Offset="0"/>
-                    <GradientStop Color="white" Offset="1"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-            <Button x:Name="KlienciButton" Content="Klienci" HorizontalAlignment="Left" Width="200" Click="KlienciButton_Click" FontWeight="Bold" Margin="0,24,0,25" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="PrzesylkiButton" Content="Przesyłki" HorizontalAlignment="Left" Width="200" Click="PrzesylkaButton_Click" FontWeight="Bold"  Margin="0,32,0,118" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="StatusyPrzesylekButton" Content="Statusy przesyłek" HorizontalAlignment="Left" Width="200" Click="StatusyPrzesylekButton_Click" FontWeight="Bold"  Margin="0,118,0,32" Style="{DynamicResource BlueButton}"/>
         </Grid>
 
     </Grid>

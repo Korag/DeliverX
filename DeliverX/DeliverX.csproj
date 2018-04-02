@@ -76,6 +76,9 @@
     <Compile Include="Historia.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="HistoriaPrzesylekWindow.xaml.cs">
+      <DependentUpon>HistoriaPrzesylekWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Historia_widok.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -87,6 +90,9 @@
     </Compile>
     <Compile Include="Kurs.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KursyWindow.xaml.cs">
+      <DependentUpon>KursyWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
@@ -108,6 +114,18 @@
     <Compile Include="Pages\FirmyUbezpieczenioweUsunPage.xaml.cs">
       <DependentUpon>FirmyUbezpieczenioweUsunPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\HistoriaPrzesylekAktualizujPage.xaml.cs">
+      <DependentUpon>HistoriaPrzesylekAktualizujPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HistoriaPrzesylekDodajPage.xaml.cs">
+      <DependentUpon>HistoriaPrzesylekDodajPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HistoriaPrzesylekSprawdzPage.xaml.cs">
+      <DependentUpon>HistoriaPrzesylekSprawdzPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HistoriaPrzesylekUsunPage.xaml.cs">
+      <DependentUpon>HistoriaPrzesylekUsunPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\KlienciAktualizujPage.xaml.cs">
       <DependentUpon>KlienciAktualizujPage.xaml</DependentUpon>
     </Compile>
@@ -120,6 +138,24 @@
     <Compile Include="Pages\KlienciUsunPage.xaml.cs">
       <DependentUpon>KlienciUsunPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\KursyAktualizujPage.xaml.cs">
+      <DependentUpon>KursyAktualizujPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KursyDodajPaczkePage.xaml.cs">
+      <DependentUpon>KursyDodajPaczkePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KursyDodajPage.xaml.cs">
+      <DependentUpon>KursyDodajPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KursySprawdzPage.xaml.cs">
+      <DependentUpon>KursySprawdzPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KursyUsunPaczkePage.xaml.cs">
+      <DependentUpon>KursyUsunPaczkePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\KursyUsunPage.xaml.cs">
+      <DependentUpon>KursyUsunPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\PojazdyAktualizujPage.xaml.cs">
       <DependentUpon>PojazdyAktualizujPage.xaml</DependentUpon>
     </Compile>
@@ -131,6 +167,18 @@
     </Compile>
     <Compile Include="Pages\PojazdyUsunPage.xaml.cs">
       <DependentUpon>PojazdyUsunPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrzesylkiAktualizujPage.xaml.cs">
+      <DependentUpon>PrzesylkiAktualizujPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrzesylkiDodajPage.xaml.cs">
+      <DependentUpon>PrzesylkiDodajPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrzesylkiSprawdzPage.xaml.cs">
+      <DependentUpon>PrzesylkiSprawdzPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrzesylkiUsunPage.xaml.cs">
+      <DependentUpon>PrzesylkiUsunPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\UbezpieczeniaAktualizujPage.xaml.cs">
       <DependentUpon>UbezpieczeniaAktualizujPage.xaml</DependentUpon>
@@ -191,6 +239,9 @@
     </Compile>
     <Compile Include="Pracownik.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrzesylkiWindow.xaml.cs">
+      <DependentUpon>PrzesylkiWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Przesyłka.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -253,7 +304,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="HistoriaPrzesylekWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="KlienciWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KursyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -289,6 +348,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\HistoriaPrzesylekAktualizujPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HistoriaPrzesylekDodajPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HistoriaPrzesylekSprawdzPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HistoriaPrzesylekUsunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\KlienciAktualizujPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -305,6 +380,30 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\KursyAktualizujPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\KursyDodajPaczkePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\KursyDodajPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\KursySprawdzPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\KursyUsunPaczkePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\KursyUsunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\PojazdyAktualizujPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -318,6 +417,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PojazdyUsunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PrzesylkiAktualizujPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PrzesylkiDodajPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PrzesylkiSprawdzPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PrzesylkiUsunPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -386,6 +501,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PracownicyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrzesylkiWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

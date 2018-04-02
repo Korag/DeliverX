@@ -27,12 +27,14 @@ namespace DeliverX.Pages
 
         private void PrzesylkaButton_Click(object sender, RoutedEventArgs e)
         {
-
+            PrzesylkiWindow PrzesylkiWindow = new PrzesylkiWindow();
+            PrzesylkiWindow.Show();
         }
 
         private void KursyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            KursyWindow KursyWindow = new KursyWindow();
+            KursyWindow.Show();
         }
 
         private void KlienciButton_Click(object sender, RoutedEventArgs e)
@@ -43,7 +45,8 @@ namespace DeliverX.Pages
 
         private void StatusyPrzesylekButton_Click(object sender, RoutedEventArgs e)
         {
-
+            HistoriaPrzesylekWindow HistoriaPrzesylekWindow = new HistoriaPrzesylekWindow();
+            HistoriaPrzesylekWindow.Show();
         }
     }
 }

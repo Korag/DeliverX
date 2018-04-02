@@ -10,8 +10,8 @@
 
     <ScrollViewer HorizontalAlignment="Left" Height="190" Margin="0,0,0,0" VerticalAlignment="Top" Width="536">
     <Grid Height="480">
-        <Label x:Name="ListujLabel" Content="Wybierz klienta:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,10,0,0"/>
-        <ComboBox x:Name="ListujComboBox" Margin="98,10,270,448" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="ListujLabel" Content="Wybierz pracownika:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="98" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,10,0,0"/>
+        <ComboBox x:Name="ListujComboBox" Margin="108,10,213,448" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
         <Label x:Name="StareLabel" Content="Stare:" HorizontalAlignment="Left" Height="22" Padding="47 2 0 0" VerticalAlignment="Top" Width="122" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="184,50,0,0"/>
         <Label x:Name="NoweLabel" Content="Nowe:" HorizontalAlignment="Left" Height="22" Padding="47 2 0 0" VerticalAlignment="Top" Width="122" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="316,50,0,0"/>
         <Label x:Name="ImieLabel" Content="Imię:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="86" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="98,76,0,0"/>

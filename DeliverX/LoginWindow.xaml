@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DeliverX"
         mc:Ignorable="d"
         Icon="Images\deliverX_favicon.png"
-        Title="LoginWindow" Height="540" Width="700" MinHeight="250" MinWidth="370">
+        Title="Okno logowania" Height="540" Width="700" MinHeight="250" MinWidth="370">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#4C0046FF" Offset="0"/>

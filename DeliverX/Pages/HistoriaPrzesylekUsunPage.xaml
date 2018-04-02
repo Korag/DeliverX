@@ -1,0 +1,27 @@
+﻿<Page x:Class="DeliverX.Pages.HistoriaPrzesylekUsunPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeliverX.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="190" d:DesignWidth="536"
+      Title="HistoriaPrzesylekUsunPage">
+
+    <Grid>
+        <Label x:Name="SzukajPrzesylkeLabel" Content="Wybierz przesyłkę:" HorizontalAlignment="Left" Height="28" Margin="36,10,0,0" VerticalAlignment="Top" Width="142" Style="{DynamicResource BlackLabel}"/>
+        <ComboBox x:Name="SzukajPrzesylkeComboBox" Margin="0,10,152,152" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}" HorizontalAlignment="Right" Width="206"/>
+        <Label x:Name="ArchiwalneLabel" Content="Archiwalne" HorizontalAlignment="Left" Height="28" Margin="426,18,0,0" VerticalAlignment="Top" Width="74" Style="{DynamicResource BlackLabel}"/>
+        <CheckBox x:Name="ArchiwalneCheckBox" Content="CheckBox" HorizontalAlignment="Left" Height="18" Margin="400,24,0,0" VerticalAlignment="Top" Width="16"/>
+        <Label x:Name="SzukajPrzesylkiKryteriumLabel" Content="Kryterium wyszukiwania:" HorizontalAlignment="Left" Height="28" Margin="36,46,0,0" VerticalAlignment="Top" Width="142" Style="{DynamicResource BlackLabel}"/>
+        <ComboBox x:Name="SzukajPrzesylkiKryteriumComboBox" Margin="178,46,152,116" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="SzukajPrzesylkiZapytanieLabel" Content="Wartość:" HorizontalAlignment="Left" Height="28" Margin="36,80,0,0" VerticalAlignment="Top" Width="142" Style="{DynamicResource BlackLabel}"/>
+        <TextBox x:Name="SzukajPrzesylkiZapytanieTextBox" HorizontalAlignment="Left" Height="28" Margin="178,80,0,0" Padding="0 6 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <Label x:Name="ZnalezionePrzesylkiLabel" Content="Znalezione przesyłki:" HorizontalAlignment="Left" Height="28" Margin="36,114,0,0" VerticalAlignment="Top" Width="142" Style="{DynamicResource BlackLabel}"/>
+        <ComboBox x:Name="ZnalezionePrzesylkiComboBox" Margin="178,114,152,48" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}" IsEnabled="False"/>
+        <Label x:Name="WybierzStatusLabel" Content="Wybierz status:" HorizontalAlignment="Left" Height="28" Margin="36,147,0,0" VerticalAlignment="Top" Width="142" Style="{DynamicResource BlackLabel}"/>
+        <ComboBox x:Name="WybierzStatusComboBox" Margin="178,147,152,15" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}" IsEnabled="False"/>
+        <Button x:Name="SzukajButton" Content="Szukaj" Click="SzukajButton_Click" FontWeight="Bold" Margin="0,80,24,82" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="100"/>
+        <Button x:Name="UsunButton" Content="Usuń" Click="UsunButton_Click" FontWeight="Bold" Margin="0,147,24,15" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="100"/>
+    </Grid>
+</Page>

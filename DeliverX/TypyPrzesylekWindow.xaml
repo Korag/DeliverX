@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DeliverX"
         mc:Ignorable="d"
         Icon="Images\deliverX_favicon.png"
-        Title="TypyPrzesylekWindow" Height="720" Width="1280" MinHeight="360" MinWidth="640">
+        Title="Typy Przesyłek" Height="720" Width="1280" MinHeight="360" MinWidth="640">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#4C0046FF" Offset="0"/>
