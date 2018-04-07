@@ -15,11 +15,11 @@
         <ComboBox x:Name="TypPojazduComboBox" Margin="387,53,13,115" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
         <TextBox x:Name="MaxLadownoscTextBox" HorizontalAlignment="Left" Height="22" Margin="130,143,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
         <TextBox x:Name="JednostkaLadownosciTextBox" HorizontalAlignment="Left" Height="22" Margin="230,143,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
-        <TextBox x:Name="RocznikTextBox" Height="22" Margin="387,83,13,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
         <TextBox x:Name="StanLicznikaTextBox" HorizontalAlignment="Left" Height="22" Margin="130,113,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
         <TextBox x:Name="JednostkaLicznikaTextBox" Height="22" Margin="230,113,269,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
         <TextBox x:Name="StanLicznikaDataTextBox" HorizontalAlignment="Left" Height="22" Margin="130,83,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
         <ComboBox x:Name="RodzajPaliwaComboBox" Margin="387,113,13,55" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <DatePicker x:Name="Rocznik" HorizontalAlignment="Left" Height="22" Margin="387,83,0,0" VerticalAlignment="Top" Width="136" FirstDayOfWeek="Monday" BorderBrush="{x:Null}"/>
         <Label x:Name="MarkaLabel" Content="Marka:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="116" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="14,23,0,0"/>
         <Label x:Name="ModelLabel" Content="Model:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="116" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="14,53,0,0"/>
         <Label x:Name="NrRejestracyjnyLabel" Content="Numer rejestracyjny:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="110" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="277,23,0,0"/>

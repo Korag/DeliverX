@@ -8,7 +8,27 @@
       d:DesignHeight="190" d:DesignWidth="536"
       Title="KursyDodajPaczkePage">
 
-    <Grid>
-        
-    </Grid>
+    <ScrollViewer HorizontalAlignment="Left" Height="190" Margin="0,0,0,0" VerticalAlignment="Top" Width="536" CanContentScroll="true">
+        <Grid Height="340">
+            <Label x:Name="UsunKursLabel" Content="Wybierz kurs:" HorizontalAlignment="Left" Height="28" Margin="36,18,0,0" VerticalAlignment="Top" Width="142" Style="{DynamicResource BlackLabel}"/>
+            <ComboBox x:Name="UsunKursComboBox" Margin="0,18,135,294" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}" HorizontalAlignment="Right" Width="206"/>
+            <Label x:Name="ArchiwalneLabel" Content="Archiwalne" HorizontalAlignment="Left" Height="28" Margin="426,18,0,0" VerticalAlignment="Top" Width="74" Style="{DynamicResource BlackLabel}"/>
+            <CheckBox x:Name="ArchiwalneCheckBox" Content="CheckBox" HorizontalAlignment="Left" Height="18" Margin="400,24,0,0" VerticalAlignment="Top" Width="16"/>
+            <Label x:Name="SzukajKursuKryteriumLabel" Content="Kryterium wyszukiwania:" HorizontalAlignment="Left" Height="28" Margin="36,56,0,0" VerticalAlignment="Top" Width="142" Style="{DynamicResource BlackLabel}"/>
+            <ComboBox x:Name="SzukajKursuKryteriumComboBox" Margin="178,56,135,256" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+            <Label x:Name="SzukajKursuZapytanieLabel" Content="Wartość:" HorizontalAlignment="Left" Height="28" Margin="36,94,0,0" VerticalAlignment="Top" Width="142" Style="{DynamicResource BlackLabel}"/>
+            <TextBox x:Name="SzukajKursuZapytanieTextBox" HorizontalAlignment="Left" Height="28" Margin="178,94,0,0" Padding="0 6 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+            <Label x:Name="ZnalezioneKursyLabel" Content="Znalezione przesyłki:" HorizontalAlignment="Left" Height="28" Margin="36,152,0,0" VerticalAlignment="Top" Width="142" Style="{DynamicResource BlackLabel}"/>
+            <ComboBox x:Name="ZnalezioneKursyComboBox" Margin="178,152,135,160" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}" IsEnabled="False"/>
+            <Label x:Name="SzukajPrzesylkiKryteriumLabel" Content="Kryterium wyszukiwania:" HorizontalAlignment="Left" Height="28" Margin="36,190,0,0" VerticalAlignment="Top" Width="142" Style="{DynamicResource BlackLabel}"/>
+            <ComboBox x:Name="SzukajPrzesylkiKryteriumComboBox" Margin="178,190,135,122" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+            <Label x:Name="SzukajPrzesylkiZapytanieLabel" Content="Wartość:" HorizontalAlignment="Left" Height="28" Margin="36,228,0,0" VerticalAlignment="Top" Width="142" Style="{DynamicResource BlackLabel}"/>
+            <TextBox x:Name="SzukajPrzesylkiZapytanieTextBox" HorizontalAlignment="Left" Height="28" Margin="178,228,0,0" Padding="0 6 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+            <Label x:Name="NrDokumentuPrzewozowegoLabel" Content="Numer dokumentu przewozowego:" HorizontalAlignment="Left" Height="28" Margin="10,282,0,0" VerticalAlignment="Top" Width="201" Style="{DynamicResource BlackLabel}"/>
+            <TextBox x:Name="NrDokumentuTextBox" HorizontalAlignment="Left" Height="28" Margin="211,282,0,0" Padding="0 6 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+            <Button x:Name="SzukajKursuButton" Content="Szukaj" Click="SzukajKursuButton_Click" FontWeight="Bold" Margin="0,94,10,218" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="100"/>
+            <Button x:Name="SzukajPrzesylkiButton" Content="Szukaj" FontWeight="Bold" Margin="0,228,10,84" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="100" Click="SzukajPrzesylkiButton_Click" RenderTransformOrigin="0.503,-0.126"/>
+            <Button x:Name="DodajButton" Content="Dodaj" Click="DodajButton_Click" FontWeight="Bold" Margin="409,282,10,30" Style="{DynamicResource BlueButton}"/>
+        </Grid>
+    </ScrollViewer>
 </Page>

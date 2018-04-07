@@ -24,5 +24,21 @@ namespace DeliverX.Pages
         {
             InitializeComponent();
         }
+
+        private void UsunButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+  
+        private void SzukajKursuButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SzukajPrzesylkiButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

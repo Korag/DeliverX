@@ -1,0 +1,18 @@
+﻿<Page x:Class="DeliverX.Pages.KursyListaPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeliverX.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="190" d:DesignWidth="536"
+      Title="KursyListaPage">
+
+    <Grid>
+        <Label x:Name="GenerujLabel" Content="Wybierz kurs:" HorizontalAlignment="Left" Height="28" Margin="54,58,0,0" VerticalAlignment="Top" Width="124" Style="{DynamicResource BlackLabel}"/>
+        <ComboBox x:Name="GenerujComboBox" Margin="178,58,152,104" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Button x:Name="GenerujButton" Content="Generuj" Click="GenerujButton_Click" FontWeight="Bold" Margin="0,58,52,104" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="100"/>
+        <Label x:Name="ArchiwalneLabel" Content="Archiwalne" Height="28" Margin="240,110,222,0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}"/>
+        <CheckBox x:Name="ArchiwalneCheckBox" Content="CheckBox" HorizontalAlignment="Left" Height="18" Margin="269,143,0,0" VerticalAlignment="Top" Width="16"/>
+    </Grid>
+</Page>

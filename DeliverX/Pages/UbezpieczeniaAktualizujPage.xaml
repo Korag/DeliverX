@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DeliverX.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="190" d:DesignWidth="536"
+      d:DesignHeight="400" d:DesignWidth="536"
       Title="UbezpieczeniaAktualizujPage">
 
-    <ScrollViewer HorizontalAlignment="Left" Height="190" Margin="0,0,0,0" VerticalAlignment="Top" Width="536">
+    <ScrollViewer HorizontalAlignment="Left" Height="400" Margin="0,0,0,0" VerticalAlignment="Top" Width="536">
         <Grid Height="400">
             <Label x:Name="ListujLabel" Content="Wybierz pojazd:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="110" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,10,0,0"/>
             <ComboBox x:Name="ListujComboBox" Margin="120,10,229,368" BorderBrush="Black"  Width="170" Template="{DynamicResource BlueComboBox}"/>
@@ -19,7 +19,7 @@
             <Label x:Name="FirmaLabel" Content="Firma:" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="30,117,423,0"/>
             <Label x:Name="NrPolisyLabel" Content="Numer polisy:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="66" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="30,147,0,0"/>
             <Label x:Name="CenaLabel" Content="Cena:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="66" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="30,177,0,0"/>
-            <Label x:Name="ObowiazujeOdLabel" Content="Obowiązuje od:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="114" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="30,229,0,0"/>
+            <Label x:Name="ObowiazujeOdLabel" Content="Obowiązuje od:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="114" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="30,243,0,0"/>
             <Label x:Name="ObowiazujeDoLabel" Content="Obowiązuje do:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="114" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="30,286,0,0"/>
             <TextBox x:Name="FirmaTextBox" HorizontalAlignment="Left" Height="22" Margin="96,117,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
             <TextBox x:Name="NrPolisyTextBox" HorizontalAlignment="Left" Height="22" Margin="96,147,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
@@ -30,18 +30,13 @@
             <TextBox x:Name="CenaTextBox_Nowe" HorizontalAlignment="Left" Height="22" Margin="272,177,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
             <TextBox x:Name="JednostkaCenyTextBox_Nowe" HorizontalAlignment="Left" Height="22" Margin="394,177,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top"  Width="36" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
 
-            <TextBox x:Name="ObowiazujeOdTextBox" HorizontalAlignment="Left" Height="22" Margin="144,229,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+            <TextBox x:Name="ObowiazujeOdTextBox" HorizontalAlignment="Left" Height="22" Margin="144,243,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
             <TextBox x:Name="ObowiazujeDoTextBox" HorizontalAlignment="Left" Height="22" Margin="144,286,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
-            <TextBox x:Name="ObowiazujeOdTextBox_Nowe" HorizontalAlignment="Left" Height="22" Margin="272,229,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
-            <TextBox x:Name="ObowiazujeDoTextBox_Nowe" HorizontalAlignment="Left" Height="22" Margin="272,286,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
-            <Viewbox StretchDirection="Both" Stretch="Fill" Margin="399,199,43,132">
-                <Calendar x:Name="ObowiazujeOd"  VerticalAlignment="Top" Width="182" FirstDayOfWeek="Monday" Height="165"/>
-            </Viewbox>
-            <Viewbox StretchDirection="Both" Stretch="Fill" Margin="399,268,43,63">
-                <Calendar x:Name="ObowiazujeDo"  VerticalAlignment="Top" Width="182" FirstDayOfWeek="Monday" Height="165" RenderTransformOrigin="0.14,0.483"/>
-            </Viewbox>
-            <Button x:Name="AktualizujButton" Content="Aktualizuj" Click="AktualizujButton_Click" FontWeight="Bold" Margin="168,360,265,18" Style="{DynamicResource BlueButton}"/>
-            <Button x:Name="ResetButton" Content="RESET" Click="ResetButton_Click" FontWeight="Bold" Margin="0,360,161,18" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="86"/>
+
+            <DatePicker x:Name="ObowiazujeOd" HorizontalAlignment="Left" Height="22" Margin="272,243,0,0" VerticalAlignment="Top" Width="122" FirstDayOfWeek="Monday" BorderBrush="{x:Null}"/>
+            <DatePicker x:Name="ObowiazujeDo" HorizontalAlignment="Left" Height="22" Margin="272,286,0,0" VerticalAlignment="Top" Width="122" FirstDayOfWeek="Monday" BorderBrush="{x:Null}"/>
+            <Button x:Name="AktualizujButton" Content="Aktualizuj" Click="AktualizujButton_Click" FontWeight="Bold" Margin="168,349,265,29" Style="{DynamicResource BlueButton}"/>
+            <Button x:Name="ResetButton" Content="RESET" Click="ResetButton_Click" FontWeight="Bold" Margin="0,349,161,29" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="86"/>
         </Grid>
     </ScrollViewer>
 </Page>

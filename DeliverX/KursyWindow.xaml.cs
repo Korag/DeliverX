@@ -23,6 +23,7 @@ namespace DeliverX
         public KursyWindow()
         {
             InitializeComponent();
+            KursyFrame.Content = new WindowLogoPage();
         }
 
         private void DodajPaczkeButton_Click(object sender, RoutedEventArgs e)
@@ -53,6 +54,11 @@ namespace DeliverX
         private void UsunButton_Click(object sender, RoutedEventArgs e)
         {
             KursyFrame.Content = new KursyUsunPage();
+        }
+
+        private void GenerujListeButton_Click(object sender, RoutedEventArgs e)
+        {
+            KursyFrame.Content = new KursyListaPage();
         }
     }
 }

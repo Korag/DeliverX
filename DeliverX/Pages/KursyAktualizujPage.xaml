@@ -8,7 +8,31 @@
       d:DesignHeight="190" d:DesignWidth="536"
       Title="KursyAktualizujPage">
 
-    <Grid>
-        
-    </Grid>
+    <ScrollViewer HorizontalAlignment="Left" Height="190" Margin="0,0,0,0" VerticalAlignment="Top" Width="536" CanContentScroll="true">
+        <Grid>
+            <Label x:Name="ListujKursyLabel" Content="Wybierz kurs:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="24,14,0,0"/>
+            <ComboBox x:Name="ListujKursyComboBox" Margin="137,14,220,324" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+            <Label x:Name="StareLabel" Content="Stare" HorizontalAlignment="Left" Height="22" Padding="35 2 0 0" VerticalAlignment="Top" Width="96" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="128,65,0,0" RenderTransformOrigin="1.526,-0.618"/>
+            <Label x:Name="NoweLabel" Content="Nowe" Height="22" Padding="35 2 0 0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="343,65,80,0"/>
+            <Label x:Name="ArchiwalneLabel" Content="Archiwalne" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="368,14,94,0"/>
+            <CheckBox x:Name="ArchiwalneCheckBox" Content="CheckBox" HorizontalAlignment="Left" Height="22" Margin="343,18,0,0" VerticalAlignment="Top" Width="19" RenderTransformOrigin="1,0.75"/>
+            <Label x:Name="PracownikLabel" Content="Pracownik:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="60" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="24,92,0,0"/>
+            <TextBox x:Name="PracownikTextBox" HorizontalAlignment="Left" Height="22" Margin="84,92,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+            <TextBox x:Name="PojazdTextBox" HorizontalAlignment="Left" Height="22" Margin="84,122,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+            <TextBox x:Name="DataTextBox" HorizontalAlignment="Left" Height="22" Margin="112,156,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+            <TextBox x:Name="UwagiTextBox" HorizontalAlignment="Left" Height="63" Margin="64,223,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+            <TextBox x:Name="DystansTextBox" Height="22" Margin="112,186,257,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+            <Label x:Name="PojazdLabel" Content="Pojazd:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="60" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="24,122,0,0"/>
+            <Label x:Name="DataLabel" Content="Data:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="24,156,0,0"/>
+            <Label x:Name="UwagiLabel" Content="Uwagi:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="40" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="24,223,0,0"/>
+            <Label x:Name="DystansLabel" Content="Dystans:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="24,186,0,0"/>
+            <ComboBox x:Name="PojazdComboBox" Margin="302,122,39,216" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+            <ComboBox x:Name="PracownikComboBox" Margin="302,92,39,246" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+            <DatePicker x:Name="Data" HorizontalAlignment="Left" Height="22" Margin="302,156,0,0" VerticalAlignment="Top" Width="150" FirstDayOfWeek="Monday" BorderBrush="{x:Null}"/>
+            <TextBox x:Name="UwagiTextBox_Nowe" Height="63" Margin="302,223,36,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+            <TextBox x:Name="DystansTextBox_Nowe" Height="22" Margin="302,186,67,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+            <Button x:Name="AktualizujButton" Content="Aktualizuj" Click="AktualizujButton_Click" FontWeight="Bold" Margin="176,309,257,27" Style="{DynamicResource BlueButton}" RenderTransformOrigin="0.5,0.5"/>
+            <Button x:Name="ResetButton" Content="RESET" Click="ResetButton_Click" FontWeight="Bold" Margin="0,309,131,27" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="86"/>
+        </Grid>
+    </ScrollViewer>
 </Page>

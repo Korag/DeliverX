@@ -43,10 +43,7 @@
             <TextBox x:Name="RocznikTextBox_Nowe" HorizontalAlignment="Left" Height="22" Margin="322,223,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}" RenderTransformOrigin="0.504,-1.205"/>
             <TextBox x:Name="StanLicznikaTextBox_Nowe" HorizontalAlignment="Left" Height="22" Margin="322,253,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
             <TextBox x:Name="JednostkaLicznikaTextBox_Nowe" HorizontalAlignment="Left" Height="22" Margin="444,253,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top"  Width="37" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
-            <TextBox x:Name="StanLicznikaDataTextBox_Nowe" HorizontalAlignment="Left" Height="22" Margin="322,283,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
-            <Viewbox StretchDirection="Both" Stretch="Fill" Margin="444,275,10,65">
-                <Calendar HorizontalAlignment="Left"  VerticalAlignment="Top" Width="182" FirstDayOfWeek="Monday" Height="165"/>
-            </Viewbox>
+            <DatePicker x:Name="DataZmiany" HorizontalAlignment="Left" Height="22" Margin="322,283,0,0" VerticalAlignment="Top" Width="122" FirstDayOfWeek="Monday" BorderBrush="{x:Null}"/>
             <ComboBox x:Name="RodzajPaliwaComboBox"  Width="122" Margin="322,313,75,65" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
             <Button x:Name="AktualizujButton" Content="Aktualizuj" Click="AktualizujButton_Click" FontWeight="Bold" Margin="182,360,251,18" Style="{DynamicResource BlueButton}"/>
             <Button x:Name="ResetButton" Content="RESET" Click="ResetButton_Click" FontWeight="Bold" Margin="0,360,111,18" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="86"/>

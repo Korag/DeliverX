@@ -8,7 +8,29 @@
       d:DesignHeight="190" d:DesignWidth="536"
       Title="HistoriaPrzesylekAktualizujPage">
 
-    <Grid>
-        
+    <ScrollViewer HorizontalAlignment="Left" Height="190" Margin="0,0,0,0" VerticalAlignment="Top" Width="536" CanContentScroll="true">
+    <Grid Height="300">
+        <Label x:Name="ListujPrzesylkiLabel" Content="Wybierz przesyłkę:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="67,14,0,0"/>
+        <ComboBox x:Name="ListujPrzesylkiComboBox" Margin="180,14,161,264" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="ArchiwalneLabel" Content="Archiwalne" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="411,14,53,0"/>
+        <CheckBox x:Name="ArchiwalneCheckBox" Content="CheckBox" HorizontalAlignment="Left" Height="22" Margin="386,18,0,0" VerticalAlignment="Top" Width="19" RenderTransformOrigin="1,0.75"/>
+        <Label x:Name="KryteriumLabel" Content="Kryterium wyszukiwania:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="67,41,0,0"/>
+        <Label x:Name="KryteriumWartoscLabel" Content="Wartość:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="67,68,0,0"/>
+        <ComboBox x:Name="KryteriumComboBox" Margin="180,41,161,237" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <ComboBox x:Name="KryteriumWartoscComboBox" Margin="180,68,161,210" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="ListujStatusyLabel" Content="Wybierz status:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="67,103,0,0"/>
+        <ComboBox x:Name="ListujStatusComboBox" Margin="180,103,161,175" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"  IsEnabled="False"/>
+        <Label x:Name="DataZmianyLabel" Content="Data zmiany:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="96" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="15,179,0,0"/>
+        <TextBox x:Name="DataZmianyTextBox" Height="22" Margin="111,179,295,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <Label x:Name="OpisLabel" Content="Opis:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="29" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="15,206,0,0"/>
+        <TextBox x:Name="OpisTextBox" Height="68" Margin="44,206,295,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"  IsEnabled="False"/>
+        <Label x:Name="StareLabel" Content="Stare" HorizontalAlignment="Left" Height="22" Padding="35 2 0 0" VerticalAlignment="Top" Width="96" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="129,152,0,0" RenderTransformOrigin="1.526,-0.618"/>
+        <Label x:Name="NoweLabel" Content="Nowe" HorizontalAlignment="Left" Height="22" Padding="35 2 0 0" VerticalAlignment="Top" Width="96" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="256,152,0,0"/>
+        <TextBox x:Name="DataZmianyTextBox_Nowe" Height="22" Margin="256,179,150,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="OpisTextBox_nowe" Height="68" Margin="256,206,83,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <DatePicker x:Name="DataZmiany" HorizontalAlignment="Left" Height="22" Margin="374,179,0,0" VerticalAlignment="Top" Width="122" FirstDayOfWeek="Monday" BorderBrush="{x:Null}"/>
+        <Button x:Name="AktualizujButton" Content="Aktualizuj" Click="AktualizujButton_Click" FontWeight="Bold" Margin="380,68,53,208" Style="{DynamicResource BlueButton}" RenderTransformOrigin="0.5,0.5"/>
+        <Button x:Name="ResetButton" Content="RESET" Click="ResetButton_Click" FontWeight="Bold" Margin="0,103,53,173" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="86"/>
     </Grid>
+    </ScrollViewer>
 </Page>

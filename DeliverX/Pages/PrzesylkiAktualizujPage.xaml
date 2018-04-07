@@ -8,7 +8,57 @@
       d:DesignHeight="190" d:DesignWidth="536"
       Title="PrzesylkiAktualizujPage">
 
-    <Grid>
-        
+    <ScrollViewer HorizontalAlignment="Left" Height="190" Margin="0,0,0,0" VerticalAlignment="Top" Width="536" CanContentScroll="true">
+    <Grid Height="600">
+        <Label x:Name="ListujPrzesylkiLabel" Content="Wybierz przesyłkę:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,10,0,0"/>
+        <ComboBox x:Name="ListujPrzesylkiComboBox" Margin="123,10,218,568" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="ArchiwalneLabel" Content="Archiwalne" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="56" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="354,10,0,0"/>
+        <CheckBox x:Name="ArchiwalneCheckBox" Content="CheckBox" HorizontalAlignment="Left" Height="22" Margin="329,14,0,0" VerticalAlignment="Top" Width="19" RenderTransformOrigin="1,0.75"/>
+        <Label x:Name="KryteriumLabel" Content="Kryterium wyszukiwania:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,37,0,0"/>
+        <Label x:Name="KryteriumWartoscLabel" Content="Wartość:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,64,0,0"/>
+        <ComboBox x:Name="KryteriumComboBox" Margin="123,37,218,541" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <ComboBox x:Name="KryteriumWartoscComboBox" Margin="123,64,218,514" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="TypPrzesylkiLabel" Content="Typ przesyłki:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="101" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,133,0,0"/>
+        <Label x:Name="StareLabel" Content="Stare:" HorizontalAlignment="Left" Height="22" Padding="70 2 0 0" VerticalAlignment="Top" Width="162" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="111,106,0,0"/>
+        <Label x:Name="NoweLabel" Content="Nowe:" HorizontalAlignment="Left" Height="22" Padding="70 2 0 0" VerticalAlignment="Top" Width="162" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="329,106,0,0"/>
+        <TextBox x:Name="TypPrzesylkiTextBox" Height="22" Margin="111,133,246,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <TextBox x:Name="NadawcaTextBox" Height="22" Margin="111,163,246,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <TextBox x:Name="OdbiorcaTextBox" Height="22" Margin="111,223,246,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False" RenderTransformOrigin="0.182,-4.091"/>
+        <TextBox x:Name="OsobaOdbierajacaTextBox" Height="22" Margin="111,283,246,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False" RenderTransformOrigin="0.182,-4.091"/>
+        <TextBox x:Name="DataNadaniaTextBox" Height="22" Margin="172,392,218,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <TextBox x:Name="DataWymaganaTextBox" HorizontalAlignment="Left" Height="22" Margin="172,424,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="129" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <TextBox x:Name="WagaTextBox" HorizontalAlignment="Left" Height="22" Margin="112,343,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="118" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <TextBox x:Name="WagaJednostkaTextBox" HorizontalAlignment="Left" Height="22" Margin="230,343,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False" RenderTransformOrigin="-3.012,0.561"/>
+        <TextBox x:Name="TypPlatnosciTextBox" HorizontalAlignment="Left" Margin="97,477,0,101" Padding="0 2 0 0" TextWrapping="Wrap" Width="146" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <TextBox x:Name="OplataTextBox" HorizontalAlignment="Left" Margin="97,507,0,71" Padding="0 2 0 0" TextWrapping="Wrap" Width="118" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <TextBox x:Name="OplataJednostkaTextBox" HorizontalAlignment="Left" Height="22" Margin="215,507,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top"  Width="28" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <Label x:Name="NadawcaLabel" Content="Nadawca:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="101" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,163,0,0"/>
+        <Label x:Name="OdbiorcaLabel" Content="Odbiorca:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="101" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,223,0,0"/>
+        <Label x:Name="OsobaOdbierajacaLabel" Content="Odbiór u innej osoby:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="100" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="11,283,0,0"/>
+        <Label x:Name="DataNadaniaLabel" Content="Data nadania:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="160" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="12,392,0,0"/>
+        <Label x:Name="DataWymaganaLabel" Content="Data zaplanowanego dostarczenia:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="160" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="12,424,0,0"/>
+        <Label x:Name="WagaLabel" Content="Waga:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="101" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="11,343,0,0" RenderTransformOrigin="0.282,0.592"/>
+        <Label x:Name="TypPlatnosciLabel" Content="Typ płatności:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="86" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="11,477,0,0"/>
+        <Label x:Name="OplataLabel" Content="Opłata:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="86" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="11,507,0,0"/>
+
+        <ComboBox x:Name="TypPrzesylkiComboBox" Margin="329,133,28,445" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <ComboBox x:Name="NadawcaComboBox" Margin="329,163,28,415" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <ComboBox x:Name="OdbiorcaComboBox" Margin="328,223,28,352" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <ComboBox x:Name="OsobnyOdbiorcaComboBox" Margin="329,283,28,295" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <TextBox x:Name="NadawcaTextBox_Szukaj" Height="22" Margin="329,193,28,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="OdbiorcaTextBox_Szukaj" Height="22" Margin="329,253,28,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="OsobnyOdbiorcaTextBox_Szukaj" Height="22" Margin="329,313,28,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="WagaTextBox_Nowe" Height="22" Margin="329,343,72,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="WagaJednostkaTextBox_Nowe" HorizontalAlignment="Left" Height="22" Margin="447,343,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <ComboBox x:Name="TypPlatnosciComboBox_Nowe" Margin="329,477,44,101" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <TextBox x:Name="OplataTextBox_Nowe" HorizontalAlignment="Left" Margin="329,507,0,71" Padding="0 2 0 0" TextWrapping="Wrap" Width="118" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <TextBox x:Name="OplataJednostkaTextBox_Nowe" HorizontalAlignment="Left" Height="22" Margin="447,507,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top"  Width="28" FontSize="10" Style="{DynamicResource BlueTextBox}"/>
+        <CheckBox x:Name="OsobnyOdbiorCheckBox" Content="CheckBox" HorizontalAlignment="Left" Height="22" Margin="283,287,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="1,0.75"/>
+        <CheckBox x:Name="OsobnyOdbiorCheckBox_Nowe" Content="CheckBox" HorizontalAlignment="Left" Height="22" Margin="501,287,0,0" VerticalAlignment="Top" Width="18" RenderTransformOrigin="1,0.75"/>
+        <DatePicker x:Name="DataNadania" HorizontalAlignment="Left" Height="22" Margin="328,392,0,0" VerticalAlignment="Top" Width="151" FirstDayOfWeek="Monday" BorderBrush="{x:Null}"/>
+        <DatePicker x:Name="DataZaplanowanegoDostarczenia" HorizontalAlignment="Left" Height="22" Margin="328,424,0,0" VerticalAlignment="Top" Width="151" FirstDayOfWeek="Monday" BorderBrush="{x:Null}"/>
+        <Button x:Name="AktualizujButton" Content="Aktualizuj" Click="AktualizujButton_Click" FontWeight="Bold" Margin="173,557,277,19" Style="{DynamicResource BlueButton}"/>
+        <Button x:Name="ResetButton" Content="RESET" Click="ResetButton_Click" FontWeight="Bold" Margin="0,557,168,19" Style="{DynamicResource BlueButton}" HorizontalAlignment="Right" Width="86" RenderTransformOrigin="0.5,-0.354"/>
     </Grid>
+    </ScrollViewer>
 </Page>

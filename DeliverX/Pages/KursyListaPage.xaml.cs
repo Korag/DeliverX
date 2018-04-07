@@ -16,21 +16,16 @@ using System.Windows.Shapes;
 namespace DeliverX.Pages
 {
     /// <summary>
-    /// Interaction logic for HistoriaPrzesylekDodajPage.xaml
+    /// Interaction logic for KursyListaPage.xaml
     /// </summary>
-    public partial class HistoriaPrzesylekDodajPage : Page
+    public partial class KursyListaPage : Page
     {
-        public HistoriaPrzesylekDodajPage()
+        public KursyListaPage()
         {
             InitializeComponent();
         }
 
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void DodajButton_Click(object sender, RoutedEventArgs e)
+        private void GenerujButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

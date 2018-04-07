@@ -85,5 +85,10 @@ namespace DeliverX
 
             this.Close();
         }
+
+        private void NarzedziaButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Content = new MainWindowNarzedziaPage();
+        }
     }
 }

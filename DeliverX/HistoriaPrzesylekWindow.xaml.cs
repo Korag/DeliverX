@@ -23,6 +23,7 @@ namespace DeliverX
         public HistoriaPrzesylekWindow()
         {
             InitializeComponent();
+            HistoriaFrame.Content= new WindowLogoPage();
         }
 
         private void AktualizujButton_Click(object sender, RoutedEventArgs e)

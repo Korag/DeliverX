@@ -27,7 +27,8 @@
                 <Button x:Name="SprawdzButton" Content="Sprawdź dane kursu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="22,10,0,0" FontWeight="Bold" Style="{DynamicResource BlackButton}" Click="SprawdzButton_Click"/>
                 <Button x:Name="UsunButton" Content="Usuń kurs" VerticalAlignment="Top" Margin="389,35,22,0"  FontWeight="Bold" Style="{DynamicResource BlackButton}" Click="UsunButton_Click"/>
                 <Button x:Name="DodajPaczkeButton" Content="Dodaj paczkę do kursu" VerticalAlignment="Top" Margin="10,270,401,0"  FontWeight="Bold" Style="{DynamicResource BlackButton}" Click="DodajPaczkeButton_Click"/>
-                <Button x:Name="UsunPaczkeButton" Content="Usuń paczkę z kursu" VerticalAlignment="Top" Margin="160,270,251,0"  FontWeight="Bold" Style="{DynamicResource BlackButton}" Click="UsunPaczkeButton_Click"/>
+                <Button x:Name="UsunPaczkeButton" Content="Usuń paczkę z kursu" VerticalAlignment="Top" Margin="160,270,278,0"  FontWeight="Bold" Style="{DynamicResource BlackButton}" Click="UsunPaczkeButton_Click"/>
+                <Button x:Name="GenerujListeButton" Content="Generuj listę kursu" VerticalAlignment="Top" Margin="283,270,155,0"  FontWeight="Bold" Style="{DynamicResource BlackButton}" Click="GenerujListeButton_Click"/>
                 <Grid Margin="10,75,10,30">
                     <Grid.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

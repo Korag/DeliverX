@@ -23,6 +23,7 @@ namespace DeliverX
         public PrzesylkiWindow()
         {
             InitializeComponent();
+            PrzesylkiFrame.Content = new WindowLogoPage();
         }
 
         private void SprawdzButton_Click(object sender, RoutedEventArgs e)

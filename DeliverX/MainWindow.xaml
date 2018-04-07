@@ -45,7 +45,7 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button x:Name="NarzedziaButton" Content="Narzędzia" VerticalAlignment="Top" Margin="401,45,10,0" Click="ZarzadzanieButton_Click" FontWeight="Bold" Style="{DynamicResource BlackButton}"/>
+                <Button x:Name="NarzedziaButton" Content="Narzędzia" VerticalAlignment="Top" Margin="401,45,10,0" Click="NarzedziaButton_Click" FontWeight="Bold" Style="{DynamicResource BlackButton}"/>
                 <Button x:Name="LogoutButton" Content="WYLOGUJ" VerticalAlignment="Top" Margin="427,16,32,0" Height="19" Click="LogoutButton_Click" FontWeight="Bold" Foreground="Red" BorderBrush="Red">
                     <Button.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

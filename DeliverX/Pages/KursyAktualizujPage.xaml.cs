@@ -24,5 +24,15 @@ namespace DeliverX.Pages
         {
             InitializeComponent();
         }
+
+        private void AktualizujButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -147,6 +147,9 @@
     <Compile Include="Pages\KursyDodajPage.xaml.cs">
       <DependentUpon>KursyDodajPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\KursyListaPage.xaml.cs">
+      <DependentUpon>KursyListaPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\KursySprawdzPage.xaml.cs">
       <DependentUpon>KursySprawdzPage.xaml</DependentUpon>
     </Compile>
@@ -155,6 +158,9 @@
     </Compile>
     <Compile Include="Pages\KursyUsunPage.xaml.cs">
       <DependentUpon>KursyUsunPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainWindowNarzedziaPage.xaml.cs">
+      <DependentUpon>MainWindowNarzedziaPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PojazdyAktualizujPage.xaml.cs">
       <DependentUpon>PojazdyAktualizujPage.xaml</DependentUpon>
@@ -392,6 +398,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\KursyListaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\KursySprawdzPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -401,6 +411,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\KursyUsunPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MainWindowNarzedziaPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -9,6 +9,21 @@
       Title="KursySprawdzPage">
 
     <Grid>
-        
+        <Label x:Name="ListujKursyLabel" Content="Wybierz kurs:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="32,14,0,0"/>
+        <ComboBox x:Name="ListujKursyComboBox" Margin="145,14,213,154" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+        <Label x:Name="ArchiwalneLabel" Content="Archiwalne" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="368,14,113,0"/>
+        <CheckBox x:Name="ArchiwalneCheckBox" Content="CheckBox" HorizontalAlignment="Left" Height="22" Margin="343,18,0,0" VerticalAlignment="Top" Width="19" RenderTransformOrigin="1,0.75"/>
+        <Label x:Name="PracownikLabel" Content="Pracownik:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="60" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="17,81,0,0"/>
+        <TextBox x:Name="PracownikTextBox" HorizontalAlignment="Left" Height="22" Margin="77,81,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <TextBox x:Name="PojazdTextBox" HorizontalAlignment="Left" Height="22" Margin="77,51,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <TextBox x:Name="DataTextBox" HorizontalAlignment="Left" Height="22" Margin="357,81,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <TextBox x:Name="UwagiTextBox" HorizontalAlignment="Left" Height="63" Margin="57,111,0,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" Width="198" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <TextBox x:Name="DystansTextBox" Height="22" Margin="357,51,57,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <Label x:Name="PojazdLabel" Content="Pojazd:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="60" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="17,51,0,0"/>
+        <Label x:Name="DataLabel" Content="Data:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="269,81,0,0"/>
+        <Label x:Name="UwagiLabel" Content="Uwagi:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="40" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="17,111,0,0"/>
+        <Label x:Name="DystansLabel" Content="Dystans:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="88" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="269,51,0,0"/>
+        <TextBox x:Name="PrzesylkiTextBox" Height="63" Margin="316,111,22,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        <Label x:Name="PrzesylkiLabel" Content="Przesyłki:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="47" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="269,111,0,0"/>
     </Grid>
 </Page>

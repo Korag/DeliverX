@@ -7,8 +7,23 @@
       mc:Ignorable="d" 
       d:DesignHeight="190" d:DesignWidth="536"
       Title="HistoriaPrzesylekSprawdzPage">
-
-    <Grid>
-        
-    </Grid>
+    
+    <ScrollViewer HorizontalAlignment="Left" Height="190" Margin="0,0,0,0" VerticalAlignment="Top" Width="536" CanContentScroll="true">
+        <Grid Height="250">
+            <Label x:Name="ListujPrzesylkiLabel" Content="Wybierz przesyłkę:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="67,14,0,0"/>
+            <ComboBox x:Name="ListujPrzesylkiComboBox" Margin="180,14,161,214" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+            <Label x:Name="ArchiwalneLabel" Content="Archiwalne" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="411,14,53,0"/>
+            <CheckBox x:Name="ArchiwalneCheckBox" Content="CheckBox" HorizontalAlignment="Left" Height="22" Margin="386,18,0,0" VerticalAlignment="Top" Width="19" RenderTransformOrigin="1,0.75"/>
+            <Label x:Name="KryteriumLabel" Content="Kryterium wyszukiwania:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="67,41,0,0"/>
+            <Label x:Name="KryteriumWartoscLabel" Content="Wartość:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="67,68,0,0"/>
+            <ComboBox x:Name="KryteriumComboBox" Margin="180,41,161,187" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+            <ComboBox x:Name="KryteriumWartoscComboBox" Margin="180,68,161,160" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"/>
+            <Label x:Name="ListujStatusyLabel" Content="Wybierz status:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="67,103,0,0"/>
+            <ComboBox x:Name="ListujStatusComboBox" Margin="180,103,161,125" BorderBrush="Black"  Template="{DynamicResource BlueComboBox}"  IsEnabled="False"/>
+            <Label x:Name="DataZmianyLabel" Content="Data zmiany:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="113" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="67,130,0,0"/>
+            <TextBox x:Name="DataZmianyTextBox" Height="22" Margin="180,130,161,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+            <Label x:Name="OpisLabel" Content="Opis:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="34" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="67,157,0,0"/>
+            <TextBox x:Name="OpisTextBox" Height="68" Margin="101,157,161,0" Padding="0 2 0 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Style="{DynamicResource BlueTextBox}" IsEnabled="False"/>
+        </Grid>
+    </ScrollViewer>
 </Page>

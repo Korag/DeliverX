@@ -1,0 +1,20 @@
+﻿<Page x:Class="DeliverX.Pages.MainWindowNarzedziaPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeliverX.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="190" d:DesignWidth="536"
+      Title="MainWindowNarzedziaPage">
+
+    <Grid>
+        <Button x:Name="ZestPrzesylkaPracownikButton" Content="Zestawienie przesyłek dostarczonych przez pracowników" HorizontalAlignment="Left" VerticalAlignment="Top" Width="516" FontWeight="Bold" Style="{DynamicResource BlueButton}" Margin="10,10,0,0" Click="ZestPrzesylkaPracownikButton_Click"/>
+        <Button x:Name="ZestPrzesylkaKlientButton" Content="Klasyfikacja ilości klientów do miejsca ich zamieszkania" HorizontalAlignment="Left" VerticalAlignment="Top" Width="516"  FontWeight="Bold" Style="{DynamicResource BlueButton}" Margin="10,35,0,0" Click="ZestPrzesylkaKlientButton_Click"/>
+        <Button x:Name="ZestPrzesylkKlientOdebraneButton" Content="Liczba przesyłek odebrana przez konkretnych klientów w danym roku" HorizontalAlignment="Left" VerticalAlignment="Top" Width="516" FontWeight="Bold" Style="{DynamicResource BlueButton}" Margin="10,60,0,0" Click="ZestPrzesylkKlientOdebraneButton_Click"/>
+        <Button x:Name="ZestPrzesylKlientWyslaneButton" Content="Liczba przesyłek odebrana przez konkretnych klientów w danym roku" HorizontalAlignment="Left" Width="516" FontWeight="Bold" Style="{DynamicResource BlueButton}" Margin="10,85,0,85" RenderTransformOrigin="0.498,1.267" Click="ZestPrzesylKlientWyslaneButton_Click"/>
+        <Button x:Name="ZestStatusyCzasButton" Content="Klasyfikacja liczby nadanych statusów w przestrzeni czasu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="516" FontWeight="Bold" Style="{DynamicResource BlueButton}" Margin="10,110,0,0" Click="ZestStatusyCzasButton_Click"/>
+        <Button x:Name="ZestPojazdyButton" Content="Zestawienie informacji dotyczących pojazdów" HorizontalAlignment="Left" VerticalAlignment="Top" Width="516" FontWeight="Bold" Style="{DynamicResource BlueButton}" Margin="10,135,0,0" Click="ZestPojazdyButton_Click"/>
+        <Button x:Name="ZestTypyPlatnosciButton" Content="Klasyfikacja przesyłek ze względu na metodę płatności" HorizontalAlignment="Left" Width="516" FontWeight="Bold" Style="{DynamicResource BlueButton}" Margin="10,160,0,10" Click="ZestTypyPlatnosciButton_Click"/>
+    </Grid>
+</Page>

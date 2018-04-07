@@ -24,5 +24,20 @@ namespace DeliverX.Pages
         {
             InitializeComponent();
         }
+
+        private void DodajButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SzukajPrzesylkiButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SzukajKursuButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
