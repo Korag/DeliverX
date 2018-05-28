@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DeliverX.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="400" d:DesignWidth="536"
+      d:DesignHeight="190" d:DesignWidth="536"
       Title="UbezpieczeniaAktualizujPage">
 
-    <ScrollViewer HorizontalAlignment="Left" Height="400" Margin="0,0,0,0" VerticalAlignment="Top" Width="536">
+    <ScrollViewer HorizontalAlignment="Left" Height="190" Margin="0,0,0,0" VerticalAlignment="Top" Width="536">
         <Grid Height="400">
             <Label x:Name="ListujLabel" Content="Wybierz pojazd:" HorizontalAlignment="Left" Height="22" Padding="2 2 0 0" VerticalAlignment="Top" Width="110" Style="{DynamicResource BlackLabel}" FontSize="10" Margin="10,10,0,0"/>
             <ComboBox x:Name="ListujComboBox" Margin="120,10,229,368" BorderBrush="Black"  Width="170" Template="{DynamicResource BlueComboBox}"/>
